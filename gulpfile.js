@@ -69,9 +69,78 @@ function slugify(t) {
   : false ;
 }
 
+// define custom functions ///////////////////////////////////
+function returnPerson(p) {
+  var person;
+  var peopleJSON = require('./source/data/people.json');
+  for (var i = 0; i < peopleJSON.data.length; i++) {
+    var fullName = peopleJSON.data[i].name.first + " " + peopleJSON.data[i].name.last;
+    if (fullName === p) {
+      person = peopleJSON.data[i];
+    } 
+  }
+  return person;
+}
+
+function sortJsonDescByDate(d) {
+  var sortedData = d.sort(function(a,b) {
+    return new Date(b.date.start) - new Date(a.date.start);
+  });
+  return sortedData;
+}
+
+function sortJsonAscByDate(d) {
+  var sortedData = d.sort(function(a,b) {
+    return new Date(a.date.start) - new Date(b.date.start);
+  });
+  return sortedData;
+}
+
+function isOutdated(d) {
+  var today = new Date();
+  if (today > new Date(d)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function getLatestCourses(data) {
+  var latestCourses = [];
+  var sortedCourses = sortJsonDescByDate(data);
+  for (var i = 0; i < 3; i++) {
+    latestCourses.push(sortedCourses[i]);
+  }
+  return sortJsonAscByDate(latestCourses);
+}
+
+function contains(arr, v) {
+  return arr.indexOf(v) > -1;
+}
+
+function getCourses(name) {
+  var courseData = require('./source/data/coaching.json');
+  var courses = [];
+  for (var i = 0; i < courseData.data.length; i++) {
+    if (courseData.data[i].faculty_members.indexOf(name) > -1) {
+      courses.push(courseData.data[i]);
+    }
+  }
+  return sortJsonDescByDate(courses);
+}
+
+
+
 // DEV TASKS
 function nunjucksEnv(env) {
   env.addFilter('slug', slugify);
+  env.addFilter('returnPerson', returnPerson);
+  env.addFilter("sortJsonDescByDate", sortJsonDescByDate);
+  env.addFilter("sortJsonAscByDate", sortJsonAscByDate);
+  env.addFilter("isOutdated", isOutdated);
+  env.addFilter("getLatestCourses", getLatestCourses);
+  env.addFilter("contains",contains);
+  env.addFilter("getCourses", getCourses);
 }
 
 
@@ -144,14 +213,14 @@ function generateVinyl(basePath, dataPath, fPrefix, fSuffix, dSuffix) {
           for (var d in _data) {
             if (_data[d].hasOwnProperty('title')) {
               // name file if title exists
-              fname = slugify(_data[d].title);
+              fname = '-' + slugify(_data[d].title);
             } else {
               // otherwise just use id
               fname = '';
             }
             f = new File({
               base: basePath,
-              path: basePath + baseName + '/' + fPrefix + fname + fSuffix,
+              path: basePath + baseName + '/' + fPrefix + _data[d].id + fname + fSuffix,
               contents: baseTemplate
             });
             files.push(f);

@@ -3,21 +3,91 @@
 - title: Turner Construction
   type: Domestic Business Corporation
   industry: Construction Management, Consulting
+  risk_score: 54
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 18
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 56
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 22
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 86
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 92
+
 - title: Hunt construction
   type: Domestic For-Profit Corporation
   industry: Construction Management
+  risk_score: 36
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 17
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 24
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 86
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 32
+
 - title: M.A. Mortenson Co
   type: Domestic For-Profit Corporation
   industry: Construction Management
+  risk_score: 78
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 75
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 79
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 81
+
 - title: Tishman Construction
   type: Corporation
   industry: Construction Management
+  risk_score: 30
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 56
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 22
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 12
+
 - title: Berwald Roofing Co. 
   type: Business Corporation (Domestic)
   industry: Construction Management
+  risk_score: 23
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 17
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 24
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 29
+
 - title: Clau Chin Construction LLC
   type: Domestic Corp
   industry: Construction Management
+  risk_score: 71
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 68
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 75
+
 - title: Harco Construction LLC
   type: Domestic LLC
   industry: Construction Management
+  risk_score: 58
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 17
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 44
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 56
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 81
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 92

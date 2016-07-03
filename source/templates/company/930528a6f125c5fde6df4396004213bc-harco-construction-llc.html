@@ -32,10 +32,10 @@
     </div>
     <div class="right-panel">
         <h3>Company Safety Score <i class="material-icons">info_outline</i></h3>
-        <div class="safety-score safety-score--medium">
+        <div class="safety-score safety-score--{% if risk_score < 35 %}high{% elif risk_score > 65 %}low{% else %}medium{% endif %}">
             <div class="safety-score__percentage">
                 <h5>Risk Score</h5>
-                <h1>45<span>%</span></h1>
+                <h1>{{risk_score}}<span>%</span></h1>
             </div>
             <h2>{# Risk Text inserted by CSS #}</h2>
             <h4>based on 9 reports from 3 worksites</h4>
@@ -47,17 +47,17 @@
 </div>
 <section class="company-sites page-section">
     <h2>Sites</h2>
-    
-    {% for i in [0, 1, 2] %}
+
+    {% for i in sites %}
     <div class="company-sites__container">
-        <article class="site-card site-card--medium">
-            <h1 class="site-card__title">100 Huron st, Brooklyn, NY 11211</h1>
+        <article class="site-card site-card--{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}">
+            <h1 class="site-card__title">{{i.address}}</h1>
             <section>
                 <h2>Site Safety Score</h2>
-                <div class="safety-score safety-score--medium">
+                <div class="safety-score safety-score--{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}">
                     <div class="safety-score__percentage">
                         <h5>Risk Score</h5>
-                        <h1>45<span>%</span></h1>
+                        <h1>{{i.risk_score}}<span>%</span></h1>
                     </div>
                     <h2>{# Risk Text inserted by CSS #}</h2>
                     <h4>based on 9 reports from 3 worksites</h4>

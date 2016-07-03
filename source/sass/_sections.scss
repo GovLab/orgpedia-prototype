@@ -44,7 +44,10 @@
   padding-top: 140px;
   background-image: url('../img/orgpedia-cover.jpg');
   background-size: cover;
+}
 
+.company-list-controls {
+  @extend .u-wrapper;
 }
 
 
