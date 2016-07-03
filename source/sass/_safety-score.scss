@@ -1,0 +1,63 @@
+.safety-score {
+  background-color: rgba($black, .1);
+  width: 100%;
+  padding: 20px 30px;
+  color: $white;
+  
+  @extend .u-clearfix;
+  
+  h2 {
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: currentColor;
+
+  }
+
+  h4 {
+    font-style: italic;
+    font-weight: 100;
+    color: rgba($white, .4);
+    margin: 10px 0;
+  }
+
+  &__percentage {
+    float: right;
+
+    h5 {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-top: 10px;
+      margin-bottom: 0;
+      color: rgba($white, .5);
+    }
+
+    h1 {
+      font-weight: 100;
+      font-size: 5rem;
+      line-height: 1;
+      margin-top: 10px;
+      margin-bottom: 0;
+      span { font-size: 3rem; }
+    }
+  }
+
+  &--medium {
+    background-color: $yellow;
+    h2:after { content: "Medium Risk"; }
+  }
+
+  &--low {
+    background-color: $green;
+    h2:after { content: "Low Risk"; }
+  }
+
+  &--high {
+    background-color: $red;
+    h2:after { content: "High Risk"; }
+  }
+
+}

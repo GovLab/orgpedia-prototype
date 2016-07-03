@@ -1,0 +1,86 @@
+.company-header {
+  @extend .u-wrapper;
+  display: flex;
+
+  .left-panel,
+  .right-panel { flex: 1; }  
+
+  .left-panel { padding-right: 25px; }
+  
+  .right-panel { padding-left: 25px; }
+
+  &__name {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: $dark-blue;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba($black, .4);
+    margin-top: 23px;
+    margin-bottom: 20px;
+
+    i {
+      vertical-align: middle;
+      font-size: 1.3rem;
+      color: $dark-blue;
+    }
+  }
+
+  &__info {
+    display: flex;
+
+    p {
+      color: rgba($black, .4);
+      margin-bottom: 10px;
+    }
+
+    &__key {
+      width: 20%;
+      p { 
+        font-weight: bold; 
+      }
+    }
+
+    &__value {
+      flex: 1;
+    }
+  }
+}
+
+.company-extra-info {
+  @extend .u-wrapper;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid rgba($black, .2);
+  padding: 4px;
+  
+  i { 
+    vertical-align: middle; 
+    color: rgba($black, .4);
+  }
+}
+
+
+.company-sites {
+  @extend .u-wrapper;
+  
+  > h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba($black, .4);
+  }
+
+  &__container {
+    width: calc(50% - 3px);
+    display: inline-block;
+    padding-bottom: 20px;
+    vertical-align: top;
+    
+    &:nth-of-type(2n) { padding-left: 10px; }
+    &:nth-of-type(2n+1) { padding-right: 10px; }
+    
+  }
+}

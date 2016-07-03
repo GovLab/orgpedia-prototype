@@ -1,0 +1,116 @@
+.site-card {
+  display: inline-block;
+  border: 1px solid rgba($black, .2);
+
+  .contractors-list { 
+    padding: 0 30px; 
+    color: rgba($black, .4);
+  }
+  
+  &__title {
+    background-color: rgba($black, .1);
+    padding: 15px 20px;
+  }
+
+  > section > h2 {
+    padding: 20px 30px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba($black, .6);
+    font-size: 1.1rem;
+
+    i {
+      float: right;
+      color: $dark-blue;
+    }
+  }
+
+  h3 {
+    text-align: right;
+    padding: 20px 30px 10px;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: bold;
+    color: rgba($black, .6);
+
+  }
+  
+  .safety-report {
+    padding: 15px 30px 15px 70px;
+    position: relative;
+
+
+    
+    &__meta {
+      font-size: .7rem;
+      font-style: italic;
+      color: rgba($black, .4);
+    }
+
+    &__time {
+      float: right;
+    }
+
+    &:nth-child(2n + 1) { background-color: rgba($black, .05); }
+
+    &--positive:before {
+      @extend .u-material-icons;
+      content: 'check_circle';
+      color: black;
+      position: absolute;
+      left: 30px;
+      color: $green;
+    }
+
+    &--negative:before {
+      @extend .u-material-icons;
+      content: 'cancel';
+      color: black;
+      position: absolute;
+      left: 30px;
+      color: $red;
+    }
+  }
+}
+
+.site-card--medium {
+  border-color: $yellow;
+  .site-card__title {
+    background-color: rgba($yellow, .1);
+  }
+}
+
+.site-card--high {
+  border-color: $red;
+  .site-card__title {
+    background-color: rgba($red, .1);
+  }
+}
+
+.site-card--low {
+  border-color: $green;
+  .site-card__title {
+    background-color: rgba($green, .1);
+  }
+}
+
+.add-report {
+  background-color: rgba($black, .07);
+  padding: 30% 0 98%;
+  text-align: center;
+
+  h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgba($black, .5);
+  }
+
+  i {
+    font-size: 8rem;
+    color: rgba($black, .15);
+  }
+
+
+}

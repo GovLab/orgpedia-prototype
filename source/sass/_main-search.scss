@@ -1,0 +1,43 @@
+.main-search {
+  padding: 30px 0;
+  display: flex;
+  max-width: 40%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  input {
+    border: 0;
+  }
+
+  input[type="text"] {
+    flex: 1;
+    padding: 16px;
+    background-color: rgba($white, .3);
+    font-size: 1.2rem;
+    color: $white;
+    font-weight: 100;
+    @extend .u-transition;
+
+    &:focus { 
+      background-color: rgba($white, .6);
+      @extend .u-transition;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: rgba($yellow, .9);
+    color: $white;
+    @extend .u-material-icons;
+    font-size: 2.2rem;
+    padding: 10px 12px;
+    cursor: pointer;
+    @extend .u-transition;
+
+    &:hover {
+      background-color: $orange;
+      @extend .u-transition;
+    }
+  }
+}

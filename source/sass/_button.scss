@@ -1,0 +1,37 @@
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgba($black, .3);
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: $text-font;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @include breakpoint($mobile-only) {
+        display: block;
+        width: 100%;
+    }
+
+    > .material-icons {
+        vertical-align: -5px;
+        margin-left: 10px;
+    }
+
+
+    &:hover { background-color: rgba($black, .7); }
+
+    &--disabled {
+        pointer-events: none;
+        display: none;
+    }
+
+    &--naked { background-color: transparent; }
+
+    &--small {
+        padding: 5px 8px;
+        font-size: .8rem;
+    }
+}

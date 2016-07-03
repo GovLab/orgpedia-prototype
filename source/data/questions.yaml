@@ -1,0 +1,22 @@
+- question: Do you feel safe on the site that you currently work?
+  status: true
+- question: Do you feel adequately trained?
+  status: false
+- question: Were you part of a site-specific health & safety program?
+  status: true
+- question: Were you part of a worker-to-worker observation program?
+  status: false
+- question: Are there on site medical facilities?
+  status: true
+- question: Is there a 100% steel-toed boots policy?
+  status: false
+- question: Is there at least one or more safety professionals on your worksite?
+  status: true
+- question: Do you feel you’re allowed to discuss bad conditions on your site?
+  status: false
+- question: Do you feel that management takes safety as foremost?
+  status: true
+- question: Does management take appropriate action to correct a bad situation?
+  status: false
+- question: Who are the sub-contractors on this site?
+  status: true

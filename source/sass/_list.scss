@@ -1,0 +1,104 @@
+.company-list-controls {
+  @extend .u-wrapper;
+}
+
+.company-list {
+  @extend .u-wrapper;
+}
+
+$card-padding: 20px;
+
+.company-card {
+  display: inline-block;
+  width: calc(33.3% - 13px);
+  display: inline-block;
+  border: 1px solid rgba($black, .2);
+  margin-right: 15px;
+  margin-bottom: 15px;
+  
+  &:nth-child(3n) { margin-right: 0; }
+
+  h1 {
+    margin: $card-padding;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    height: 44px;
+  }
+
+  .active-sites {
+    margin: $card-padding;
+
+    p {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 20px 0;
+      letter-spacing: .3px;
+    }
+
+    span {
+      display: inline-block;
+      @include circle;
+      background-color: $blue;
+      width: 48px;
+      height: 48px;
+      float: left;
+      margin-right: 15px;
+      margin-top: -12px;
+      text-align: center;
+      color: $white;
+      font-weight: 100;
+      font-size: 2rem;
+    }
+
+
+  }
+
+  footer {
+    margin: $card-padding;
+    text-align: right;
+    font-size: .8rem;
+    font-style: italic;
+    color: rgba($black, .5);
+  }
+
+  .risk-label { text-align: right; }
+
+  .risk-label:after {
+      content: "Sample Risk";
+      padding: 8px 15px;
+      color: $white;
+      letter-spacing: .5px;
+      background-color: rgba($black, .1);
+    }
+  
+
+  // Sets text and colors for the index cards
+  &--risk-medium {
+    border-color: $yellow;
+
+    .risk-label:after {
+      content: "Medium Risk";
+      background-color: $yellow;
+    }
+  }
+
+  &--risk-high {
+    border-color: $red;
+    
+    .risk-label:after {
+      content: "High Risk";
+      background-color: $red;
+    }
+  }
+
+  &--risk-low {
+    border-color: $green;
+    
+    .risk-label:after {
+      content: "Low Risk";
+      background-color: $green;
+    }
+  }
+}
+
+

@@ -1,0 +1,107 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="top-bar">
+    <div class="wrapper">
+        <a href="./" class="top-bar__logo">Orgpedia</a>
+        <form action="" class="top-bar__search"><input type="text"><input type="submit" value="search"></form>
+        <nav class="top-bar__menu">
+            <a href="#" class="button button--small">API</a>
+            <a href="#" class="button button--small">About</a>
+        </nav>
+    </div>
+</div>
+
+<div class="breadcrumbs">
+    <a href="../">Home</a><i class="material-icons">keyboard_arrow_right</i><span>{{title}}</span>
+</div>
+
+<header class="company-header page-section">
+    <div class="left-panel">
+        <h1 class="company-header__name">{{title}}</h1>
+        <div class="company-header__info">
+            <div class="company-header__info__key">
+                <p>Type</p>
+                <p>Industry</p>
+            </div>
+            <div class="company-header__info__value">
+                <p>{{type}}</p>
+                <p>{{industry}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="right-panel">
+        <h3>Company Safety Score <i class="material-icons">info_outline</i></h3>
+        <div class="safety-score safety-score--medium">
+            <div class="safety-score__percentage">
+                <h5>Risk Score</h5>
+                <h1>45<span>%</span></h1>
+            </div>
+            <h2>{# Risk Text inserted by CSS #}</h2>
+            <h4>based on 9 reports from 3 worksites</h4>
+        </div>
+    </div>
+</header>
+<div class="company-extra-info">
+    <p><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
+</div>
+<section class="company-sites page-section">
+    <h2>Sites</h2>
+    
+    {% for i in [0, 1, 2] %}
+    <div class="company-sites__container">
+        <article class="site-card site-card--medium">
+            <h1 class="site-card__title">100 Huron st, Brooklyn, NY 11211</h1>
+            <section>
+                <h2>Site Safety Score</h2>
+                <div class="safety-score safety-score--medium">
+                    <div class="safety-score__percentage">
+                        <h5>Risk Score</h5>
+                        <h1>45<span>%</span></h1>
+                    </div>
+                    <h2>{# Risk Text inserted by CSS #}</h2>
+                    <h4>based on 9 reports from 3 worksites</h4>
+                </div>
+            </section>
+
+            <section>
+                <h2>Active Contractors <i class="material-icons">info_outline</i></h2>
+                <p class="contractors-list">PM Contracting Company, Chester Contracting Corporation, Mamais Construction, Kerzner Contracting Corporation, VIK MGM Corp.,  TriState Contracting LLC, Fratello Construction</p>
+            </section>
+            
+            <section>
+                <h2>Safety Reports <i class="material-icons">info_outline</i></h2>
+                <ul>
+                    <li class="safety-report safety-report--positive">
+                        <p class="safety-report__question">Do you feel safe where you work?</p>
+                        <p class="safety-report__meta">100 Huron St, Brooklyn NY 11222 <span class="safety-report__time">10:15am 08.15.2016</span></p>
+                    </li>
+
+                    <li class="safety-report safety-report--negative">
+                        <p class="safety-report__question">Do you feel safe where you work?</p>
+                        <p class="safety-report__meta">100 Huron St, Brooklyn NY 11222 <span class="safety-report__time">10:15am 08.15.2016</span></p>
+                    </li>
+
+                    <li class="safety-report safety-report--positive">
+                        <p class="safety-report__question">Do you feel safe where you work?</p>
+                        <p class="safety-report__meta">100 Huron St, Brooklyn NY 11222 <span class="safety-report__time">10:15am 08.15.2016</span></p>
+                    </li>
+                </ul>
+                <h3>see all reports</h3>
+            </section>
+        </article>
+    </div>
+    {% endfor %}
+
+    <div class="company-sites__container">
+        <article class="add-report">
+            <i class="material-icons">add_circle_outline</i>
+            <h2>Add Report</h2>
+
+        </article>
+    </div>
+    
+</section>
+
+
+{% endblock %}

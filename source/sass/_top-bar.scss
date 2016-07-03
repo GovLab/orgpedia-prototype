@@ -1,0 +1,59 @@
+.top-bar {
+  background-color: $yellow;
+  padding: 10px;
+  > .wrapper { display: flex; }
+
+  &__logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+    letter-spacing: 2px;
+    width: 25%;
+  }
+
+  &__search {
+    flex: 1;
+    display: flex;
+
+
+    input {
+      border: 0;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 4px;
+      background-color: rgba($white, .3);
+      font-size: .8rem;
+      color: $white;
+      font-weight: 100;
+      vertical-align: top;
+      flex: 1;
+
+      @extend .u-transition;
+
+      &:focus { 
+        background-color: rgba($white, .6);
+        @extend .u-transition;
+      }
+    }
+
+    input[type="submit"] {
+      background-color: $white;
+      color: $yellow;
+      @extend .u-material-icons;
+      font-size: 1rem;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &__menu {
+    width: 25%;
+    text-align: right;
+
+    .button {
+      background-color: $orange;
+    }
+  }
+}

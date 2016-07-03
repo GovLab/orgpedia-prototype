@@ -1,0 +1,12 @@
+.breadcrumbs {
+  @extend .u-wrapper;
+  padding-top: 20px;
+
+  > * { 
+    vertical-align: middle; 
+    color: rgba($black, .4);
+  }
+
+  a:hover { color: $yellow; }
+  
+}

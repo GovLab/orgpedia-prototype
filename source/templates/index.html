@@ -1,0 +1,59 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<section class="top-section hero-image">
+    <hgroup class="centered">
+        <h1 class="main-title">orgpedia</h1>
+        <h2 class="tagline">The Crowdsourced Database of Workplace Safety</h2>
+    </hgroup>
+
+    <form action="/" class="main-search">
+        <input type="text"><input type="submit" value="search">
+    </form>
+
+    <div class="dark-panel">
+        <div class="wrapper columns">
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam magnam ex adipisci possimus ducimus, rerum! Voluptates odio iure illo illum reprehenderit animi ratione, repellendus, ducimus reiciendis, sint autem velit natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eveniet recusandae, numquam dolores animi facilis fugiat, porro minus provident non. Non modi iusto sed, itaque, maxime cumque veniam dolore natus!</p>
+            </div>
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam magnam ex adipisci possimus ducimus, rerum! Voluptates odio iure illo illum reprehenderit animi ratione, repellendus, ducimus reiciendis, sint autem velit natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto maiores sunt quae magnam provident sit possimus rem enim reiciendis beatae. Necessitatibus rerum inventore, dicta porro nisi voluptatem animi excepturi error!</p>
+            </div>
+        </div>
+        <div class="centered">
+            <a href="#" class="button button--naked">Learn More</a>
+        </div>
+    </div>
+
+</section>
+
+<section class="page-section">
+    <form action="" class="company-list-controls">
+        
+        <span class="select">
+            <select name="" id="">
+                <option value="">Sort by</option>
+                <option value="">Risk Score</option>
+                <option value="">A-Z</option>
+            </select>
+        </span>
+    </form>
+</section>
+<section class="page-section company-list">
+    {% for i in company %}
+    <a class="company-card company-card--risk-medium" href="./{{i.title | slug}}.html">
+        <h1>{{i.title}}</h1>
+        <div class="risk-label">
+            {# Content added by CSS Pseudo Elements #}
+        </div>
+        <section class="active-sites">
+            <p><span>3</span> Active Sites</p>
+        </section>
+        <footer>Last Report: Jun, 30</footer>
+    </a>
+    {% endfor %}
+    
+</section>
+
+{% endblock %}

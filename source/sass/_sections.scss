@@ -1,0 +1,59 @@
+.top-section {
+  padding-top: 40px;
+
+  .main-title,
+  .tagline {
+    color: $white;
+  }
+
+  .main-title {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+  }
+
+  .dark-panel {
+    background-color: rgba(#000, .4);
+    padding: 40px 0;
+
+    p {
+      color: $white;
+      font-weight: 200;
+      letter-spacing: .4px;
+      font-size: .9rem;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+.page-section {
+  padding-top: 40px;
+
+}
+
+
+.hero-image {
+  padding-top: 140px;
+  background-image: url('../img/orgpedia-cover.jpg');
+  background-size: cover;
+
+}
+
+
+.site-footer {
+  background-color: rgba($black, .85);
+  padding: 30px 0;
+
+  p {
+    color: $white;
+    font-weight: 100;
+  }
+}
