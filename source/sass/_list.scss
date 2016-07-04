@@ -21,10 +21,12 @@ $card-padding: 20px;
   border: 1px solid rgba($black, .2);
   
   h1 {
-    margin: $card-padding;
+    padding: 10px 20px;
+    margin: 0;
     font-size: 1.1rem;
     line-height: 1.3;
-    height: 44px;
+    background-color: rgba($black, .1);
+
   }
 
   .active-sites {
@@ -64,47 +66,98 @@ $card-padding: 20px;
   }
 
   .risk-label { 
-    text-align: right; 
+    text-align: right;
+    padding: 0;
+    position: relative;
 
     > span {
       display: none;
+
     }
   }
 
   .risk-label:after {
-      content: "Sample Risk";
-      padding: 8px 15px;
-      color: $white;
-      letter-spacing: .5px;
-      background-color: rgba($black, .1);
-    }
+    content: "Sample Risk";
+    padding: 8px 15px;
+    margin-right: -6px;
+    color: $white;
+    letter-spacing: .5px;
+    background-color: rgba($black, .1);
+    box-shadow: -2px 2px 4px rgba($black, .2);
+  }
+
+
+  .risk-label:before {
+    content: "";
+    position: absolute;
+    right: -6px;
+    bottom: -14px;
+    height: 0;
+    width: 0;
+    border-left: 3px solid rgba($black, .3);
+    border-top: 3px solid rgba($black, .3);
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid transparent;
+  }
+
   
 
   // Sets text and colors for the index cards
   &--risk-medium {
     border-color: $yellow;
 
+    h1 {
+      color: $yellow;
+      background-color: rgba($yellow, .1);
+    }
+
     .risk-label:after {
       content: "Medium Risk";
       background-color: $yellow;
+    }
+
+    .risk-label:before {
+      border-left-color: darken($yellow, 15);
+      border-top-color: darken($yellow, 15);
     }
   }
 
   &--risk-high {
     border-color: $red;
+
+    h1 {
+      color: $red;
+      background-color: rgba($red, .1);
+    }
     
     .risk-label:after {
       content: "High Risk";
       background-color: $red;
     }
+
+    .risk-label:before {
+      border-left-color: darken($red, 15);
+      border-top-color: darken($red, 15);
+    }
+
   }
 
   &--risk-low {
     border-color: $green;
+
+    h1 {
+      color: $green;
+      background-color: rgba($green, .1);
+    }
     
     .risk-label:after {
       content: "Low Risk";
       background-color: $green;
+    }
+
+    .risk-label:before {
+      border-left-color: darken($green, 15);
+      border-top-color: darken($green, 15);
     }
   }
 }
