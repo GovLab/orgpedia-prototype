@@ -7,14 +7,19 @@
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 18
+      reports: [2, 5, 7]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 56
+      reports: [2, 4, 6, 8]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 22
+      reports: [2, 4, 3, 8]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 86
+      reports: [1, 2, 3]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 92
+      reports: [5, 6, 7]
 
 - title: Hunt construction
   type: Domestic For-Profit Corporation
@@ -23,12 +28,16 @@
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 17
+      reports: [2, 4, 3]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 24
+      reports: [1, 5, 3, 4]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 86
+      reports: [4, 3, 7]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 32
+      reports: [5, 9, 1]
 
 - title: M.A. Mortenson Co
   type: Domestic For-Profit Corporation
@@ -37,10 +46,13 @@
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 75
+      reports: [8, 2]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 79
+      reports: [10, 8, 2, 1, 4]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 81
+      reports: [0, 2, 6]
 
 - title: Tishman Construction
   type: Corporation
@@ -49,10 +61,13 @@
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 56
+      reports: [1, 4, 8]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 22
+      reports: [7, 3, 5]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 12
+      reports: [1, 3, 5, 7]
 
 - title: Berwald Roofing Co. 
   type: Business Corporation (Domestic)
@@ -61,10 +76,13 @@
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 17
+      reports: [7, 1, 5, 9]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 24
+      reports: [10, 5, 7, 3, 9]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 29
+      reports: [4, 5, 1, 8]
 
 - title: Clau Chin Construction LLC
   type: Domestic Corp
@@ -73,8 +91,10 @@
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 68
+      reports: [2, 5, 8, 10]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 75
+      reports: [10, 3]
 
 - title: Harco Construction LLC
   type: Domestic LLC
@@ -83,11 +103,16 @@
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 17
+      reports: [3, 5, 9]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 44
+      reports: [9, 4, 6, 2, 1]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 56
+      reports: [1, 2, 4, 6, 7]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 81
+      reports: [2, 4, 8, 6]
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 92
+      reports: [0, 4, 10]

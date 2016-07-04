@@ -2,51 +2,52 @@
 
 {% block content %}
 <div id="homepage">
-    <section class="top-section hero-image">
-        <hgroup class="centered">
-            <h1 class="main-title">orgpedia</h1>
-            <h2 class="tagline">The Crowdsourced Database of Workplace Safety</h2>
-        </hgroup>
-
-        <form action="/" class="main-search">
-            <input type="text"><input type="submit" value="search">
-        </form>
-
-        <div class="dark-panel">
-            <div class="wrapper columns">
-                <div class="column">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam magnam ex adipisci possimus ducimus, rerum! Voluptates odio iure illo illum reprehenderit animi ratione, repellendus, ducimus reiciendis, sint autem velit natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eveniet recusandae, numquam dolores animi facilis fugiat, porro minus provident non. Non modi iusto sed, itaque, maxime cumque veniam dolore natus!</p>
-                </div>
-                <div class="column">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam magnam ex adipisci possimus ducimus, rerum! Voluptates odio iure illo illum reprehenderit animi ratione, repellendus, ducimus reiciendis, sint autem velit natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto maiores sunt quae magnam provident sit possimus rem enim reiciendis beatae. Necessitatibus rerum inventore, dicta porro nisi voluptatem animi excepturi error!</p>
-                </div>
+    <section class="top-section">
+        <div class="dark-panel hero-image">
+            <hgroup class="centered">
+                <h1 class="main-title">orgpedia</h1>
+                <h2 class="tagline">The Crowdsourced Database of Workplace Safety</h2>
+            </hgroup>
+            
+            <form action="/" class="main-search">
+                <input class="search" placeholder="Search for a company or site, to see it's safety risk" type="text"><input type="submit" value="search">
+            </form>
+            <div class="company-list-controls">
+                <button class="button button--small sort" data-sort="name">Sort by Name</button>
+                <button class="button button--small sort" data-sort="score">Sort by Score</button>
             </div>
-            <div class="centered">
-                <a href="#" class="button button--naked">Learn More</a>
-            </div>
+        </div>
+        <div class="about">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam magnam ex adipisci possimus ducimus, rerum! Voluptates odio iure illo illum reprehenderit animi ratione, repellendus, ducimus reiciendis, sint autem velit natus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam magnam ex adipisci possimus ducimus, rerum! Voluptates odio iure illo illum reprehenderit animi repellendus, ducimus reiciendis, sint autem velit natus.</p>
+            <a href="#" class="button button--small button--naked">Learn More</a>
+            
         </div>
 
     </section>
 
     <section class="page-section">
-        <div class="company-list-controls">
-            <button class="sort" data-sort="name">Sort by Name</button>
-            <button class="sort" data-sort="score">Sort by Score</button>
-        </div>
+
     </section>
     <section class="page-section company-list">
-        {% for i in company %}
-        <a class="company-card company-card--risk-{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}" href="./{{i.id}}-{{i.title | slug}}.html">
-            <h1 class="name">{{i.title}}</h1>
-            <div class="risk-label score">
-                {# Content added by CSS Pseudo Elements #}
-            </div>
-            <section class="active-sites">
-                <p><span>{{i.sites.length}}</span> Active Sites</p>
-            </section>
-            <footer>Last Report: Jun, 30</footer>
-        </a>
-        {% endfor %}
+        <ul class="list">
+            {% for i in company %}
+            <li>
+                <a class="company-card company-card--risk-{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}" href="./{{i.id}}-{{i.title | slug}}.html">
+                    <h1 class="name">{{i.title}}</h1>
+                    <div class="risk-label score">
+                        <span>{{i.risk_score}}</span>
+                        {# Content added by CSS Pseudo Elements #}
+                    </div>
+                    <section class="active-sites">
+                        <p><span>{{i.sites.length}}</span> Active Sites</p>
+                    </section>
+                    <footer>Last Report: Jun, 30</footer>
+                </a>
+            </li>
+            {% endfor %}    
+        </ul>
+        
         
     </section>
 </div>
@@ -57,7 +58,7 @@
 
 {% block scripts %}
 var options = {
-  valueNames: [ 'name', 'born' ]
+  valueNames: [ 'name', 'score' ]
 };
 
 var myList = new List('homepage', options);

@@ -47,6 +47,29 @@ input:focus {
     outline: 0;
 }
 
+// Overriding Webkit rounding on mobile browsers
+input { -webkit-appearance: none; border-radius: 0; }
+
+::-webkit-input-placeholder {
+   color: $white;
+   @include breakpoint($mobile-only) { text-align: center; }
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $white;
+   @include breakpoint($mobile-only) { text-align: center; }
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $white;
+   @include breakpoint($mobile-only) { text-align: center; }
+}
+
+:-ms-input-placeholder {  
+   color: $white;
+   @include breakpoint($mobile-only) { text-align: center; }
+}
+
 .u-wrapper {
   max-width: 960px;
   margin: 0 auto;

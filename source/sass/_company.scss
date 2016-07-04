@@ -71,6 +71,11 @@
     text-transform: uppercase;
     font-weight: bold;
     color: rgba($black, .4);
+
+    .button {
+      float: right;
+      margin-right: 5px;
+    }
   }
 
   &__container {

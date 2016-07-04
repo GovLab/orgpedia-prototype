@@ -45,11 +45,12 @@
 <div class="company-extra-info">
     <p><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
 </div>
-<section class="company-sites page-section">
-    <h2>Sites</h2>
-
+<section id="sites" class="company-sites page-section">
+    <h2>Sites <span class="button button--small sort" data-sort="score">Sort by Score</span></h2>
+    
+    <ul class="list">
     {% for i in sites %}
-    <div class="company-sites__container">
+    <li class="company-sites__container">
         <article class="site-card site-card--{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}">
             <h1 class="site-card__title">{{i.address}}</h1>
             <section>
@@ -57,10 +58,10 @@
                 <div class="safety-score safety-score--{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}">
                     <div class="safety-score__percentage">
                         <h5>Risk Score</h5>
-                        <h1>{{i.risk_score}}<span>%</span></h1>
+                        <h1 class="score">{{i.risk_score}}<span>%</span></h1>
                     </div>
                     <h2>{# Risk Text inserted by CSS #}</h2>
-                    <h4>based on 9 reports from 3 worksites</h4>
+                    <h4>based on {{i.reports.length}} reports</h4>
                 </div>
             </section>
 
@@ -72,26 +73,20 @@
             <section>
                 <h2>Safety Reports <i class="material-icons">info_outline</i></h2>
                 <ul>
-                    <li class="safety-report safety-report--positive">
-                        <p class="safety-report__question">Do you feel safe where you work?</p>
+                    {% for r in i.reports %}
+                    
+                    <li class="safety-report safety-report--{%if $global.questions[r].status==true%}positive{%else%}negative{%endif%}">
+                        <p class="safety-report__question">{{$global.questions[r].question}}</p>
                         <p class="safety-report__meta">100 Huron St, Brooklyn NY 11222 <span class="safety-report__time">10:15am 08.15.2016</span></p>
                     </li>
-
-                    <li class="safety-report safety-report--negative">
-                        <p class="safety-report__question">Do you feel safe where you work?</p>
-                        <p class="safety-report__meta">100 Huron St, Brooklyn NY 11222 <span class="safety-report__time">10:15am 08.15.2016</span></p>
-                    </li>
-
-                    <li class="safety-report safety-report--positive">
-                        <p class="safety-report__question">Do you feel safe where you work?</p>
-                        <p class="safety-report__meta">100 Huron St, Brooklyn NY 11222 <span class="safety-report__time">10:15am 08.15.2016</span></p>
-                    </li>
+                    {% endfor %}
                 </ul>
                 <h3>see all reports</h3>
             </section>
         </article>
-    </div>
+    </li>
     {% endfor %}
+    </ul>
 
     <div class="company-sites__container">
         <article class="add-report">
@@ -105,3 +100,14 @@
 
 
 {% endblock %}
+{% block scripts %}
+{% block scripts %}
+var options = {
+  valueNames: [ 'score' ]
+};
+
+var myList = new List('sites', options);
+{% endblock %}
+
+{% endblock %}
+
