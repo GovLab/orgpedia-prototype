@@ -1,22 +1,24 @@
-- question: Do you feel safe on the site that you currently work?
+- question: Do you feel safe on the site where you currently work?
   status: true
-- question: Do you feel adequately trained?
+- question: Have you received training about how to stay safe on your job?
   status: false
-- question: Were you part of a site-specific health & safety program?
+- question: Were you part of a health & safety program for this work site?
   status: true
-- question: Were you part of a worker-to-worker observation program?
+- question: Does your employer have a policy that allows you to report safety or health hazards at your workplace?
   status: false
-- question: Are there on site medical facilities?
+- question: Are there on site medical facilities at your workplace?
   status: true
-- question: Is there a 100% steel-toed boots policy?
+- question: Do you and your co-workers use personal protective equipment (ie. hard hat, steel toe boots)?
   status: false
-- question: Is there at least one or more safety professionals on your worksite?
+- question: Is there at least one or more safety professionals present on your worksite?
   status: true
-- question: Do you feel you’re allowed to discuss bad conditions on your site?
+- question: Do you know who you should talk to if there are health or safety problems on your work site?
   status: false
-- question: Do you feel that management takes safety as foremost?
+- question: (If 8 YES) Do you trust that person to fix the safety or health problem?
   status: true
-- question: Does management take appropriate action to correct a bad situation?
+- question: Do you feel you're allowed to discuss dangerous conditions on your site with your supervisors?
   status: false
-- question: Who are the sub-contractors on this site?
+- question: Has your employer taken the necessary steps to create a safe and healthy work environment for you and your co-workers?
   status: true
+- question: What are the names of the contractors with employees working on your work site - list as many as you know.
+  status: false

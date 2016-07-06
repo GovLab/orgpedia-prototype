@@ -3,9 +3,9 @@
   width: 100%;
   padding: 20px 30px;
   color: $white;
-  
+
   @extend .u-clearfix;
-  
+
   h2 {
     font-size: 2rem;
     line-height: 1;
@@ -46,7 +46,7 @@
   }
 
   &--medium {
-    background-color: $yellow;
+    background-color: $orange;
     h2:after { content: "Medium Risk"; }
   }
 

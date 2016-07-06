@@ -42,12 +42,31 @@
         </div>
     </div>
 </header>
-<div class="company-extra-info">
-    <p><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
-</div>
+
+{% if extra %}
+    <div class="company-extra-info">
+        <p class="more-info"><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
+        <div class="columns">
+            <div class="column">
+                {% if extra.trade_as %}<p><span>Trade as:</span> {{extra.trade_as}}</p>{% endif %}
+                {% if extra.founded %}<p><span>Founded:</span> {{extra.founded}}</p>{% endif %}
+                {% if extra.headquarters %}<p><span>Headquarters:</span> {{extra.headquarters}}</p>{% endif %}
+                {% if extra.key_people %}<p><span>Key people:</span> {{extra.key_people}}</p>{% endif %}
+                {% if extra.revenue %}<p><span>Revenue:</span> {{extra.revenue}}</p>{% endif %}
+                {% if extra.operating_income %}<p><span>Operating income:</span> {{extra.operating_income}}</p>{% endif %}
+                {% if extra.net_income %}<p><span>Net income:</span> {{extra.net_income}}</p>{% endif %}
+                {% if extra.total_assets %}<p><span>Total assets:</span> {{extra.total_assets}}</p>{% endif %}
+                {% if extra.total_equity %}<p><span>Total equity:</span> {{extra.total_equity}}</p>{% endif %}
+                {% if extra.number_of_employees %}<p><span>Number of employees:</span> {{extra.number_of_employees}}</p>{% endif %}
+                {% if extra.website %}<p><span>Website:</span> <a href="{{extra.website}}">{{extra.website}}</a></p>{% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
 <section id="sites" class="company-sites page-section">
     <h2>Sites <span class="button button--small sort" data-sort="score">Sort by Score</span></h2>
-    
+
     <ul class="list">
     {% for i in sites %}
     <li class="company-sites__container">
@@ -69,12 +88,12 @@
                 <h2>Active Contractors <i class="material-icons">info_outline</i></h2>
                 <p class="contractors-list">PM Contracting Company, Chester Contracting Corporation, Mamais Construction, Kerzner Contracting Corporation, VIK MGM Corp.,  TriState Contracting LLC, Fratello Construction</p>
             </section>
-            
+
             <section>
                 <h2>Safety Reports <i class="material-icons">info_outline</i></h2>
                 <ul>
                     {% for r in i.reports %}
-                    
+
                     <li class="safety-report safety-report--{%if $global.questions[r].status==true%}positive{%else%}negative{%endif%}">
                         <p class="safety-report__question">{{$global.questions[r].question}}</p>
                         <p class="safety-report__meta">100 Huron St, Brooklyn NY 11222 <span class="safety-report__time">10:15am 08.15.2016</span></p>
@@ -95,12 +114,10 @@
 
         </article>
     </div>
-    
+
 </section>
-
-
 {% endblock %}
-{% block scripts %}
+
 {% block scripts %}
 var options = {
   valueNames: [ 'score' ]
@@ -108,6 +125,3 @@ var options = {
 
 var myList = new List('sites', options);
 {% endblock %}
-
-{% endblock %}
-
