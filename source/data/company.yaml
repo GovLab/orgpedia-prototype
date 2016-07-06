@@ -1,9 +1,75 @@
 ---
 
+- title: KBR, Inc.
+  type: Domestic Business Corporation
+  extra:
+    trade_as: "NYSE: KBR"
+    founded: [1901 M.W. Kellogg, 1940's Brown & Root, 1962 Halliburton, "2006 KBR, Inc."]
+    headquarters: KBR Tower Houston, Texas, U.S.
+    key_people: ["Stuart Bradie, CEO (June 2014)", "Brian Ferraioli, CFO"]
+    revenue: $7.2 billion (FY 2013)
+    operating_income: $308 million (FY 2013)
+    net_income: $75 million (FY 2013)
+    total_assets: $5.4 billion (FY 2013)
+    total_equity: $2.44 billion (FY 2013)
+    number_of_employees: 27,000 (December 2013)
+    website: http://kbr.com
+  subsidiaries:
+    - BE&K
+    - Kellogg Brown & Root LLC
+    - KBR Holdings LLC
+    - Kellogg Brown & Root ltd
+    - BTC (US) LLC
+    - Kellogg Brown & Root Netherlands B.V.
+    - HBR NL Holdings LLC
+    - Kellogg Brown & Root Holdings (UK)
+    - Brown & Root Toll Road Investment
+    - KBR Group Holdings LLC
+    - Kellogg Brown & Root Holding B.V.
+    - Kellogg Brown & Root Holding ltd
+
+  industry: Engineering, Construction, Downstream (petroleum industry), Private military contractor, Gas Monetization, Hydrocarbons, Government Services
+  risk_score: 87
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 18
+      reports: [2, 4, 6]
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 56
+      reports: [2, 4, 6, 8]
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 22
+      reports: [2, 4, 3, 8]
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 86
+      reports: [1, 2, 3]
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 92
+      reports: [0, 6, 10]
+
+# =============================================================
+
 - title: Turner Construction
   type: Domestic Business Corporation
+  extra:
+    Headquarters: NEW YORK
+    Revenue: $10 billion (2014)
+    trade_as: "NYSE: KBR"
+    founded: [1902]
+    headquarters: New York
+    revenue: $10 billion (FY 2014)
+    number_of_employees: 5200 (2014)
+
+  subsidiaries:
+    - Turner International
+    - Turner Universal
+    - Turner Logistics
+    - Service Building Products
+    - Tompkins Builders
+
   industry: Construction Management, Consulting
   risk_score: 54
+
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 18
@@ -21,8 +87,23 @@
       risk_score: 92
       reports: [5, 6, 7]
 
+# ===============================================================
+
 - title: Hunt construction
   type: Domestic For-Profit Corporation
+  extra:
+    trade_as: 
+    founded: 1944
+    headquarters: Indianapolis 
+    key_people: 
+    revenue: 
+    operating_income: 
+    net_income: 
+    total_assets: 
+    total_equity: 
+    number_of_employees: 675
+    website: 
+
   industry: Construction Management
   risk_score: 36
   sites:
@@ -39,8 +120,22 @@
       risk_score: 32
       reports: [5, 9, 1]
 
+# ===============================================================
+
 - title: M.A. Mortenson Co
   type: Domestic For-Profit Corporation
+  extra:
+    trade_as: 
+    founded: 1954
+    headquarters: Minneapolis 
+    key_people: 
+    revenue: 
+    operating_income: 
+    net_income: 
+    total_assets: 
+    total_equity: 
+    number_of_employees: 
+    website:
   industry: Construction Management
   risk_score: 78
   sites:
@@ -54,8 +149,22 @@
       risk_score: 81
       reports: [0, 2, 6]
 
+# ===============================================================
+
 - title: Tishman Construction
   type: Corporation
+  extra:
+    trade_as: 
+    founded: 1965
+    headquarters: Delaware
+    key_people: 
+    revenue: 
+    operating_income: 
+    net_income: 
+    total_assets: 
+    total_equity: 
+    number_of_employees: 
+    website:
   industry: Construction Management
   risk_score: 30
   sites:
@@ -69,8 +178,22 @@
       risk_score: 12
       reports: [1, 3, 5, 7]
 
+# ===============================================================
+
 - title: Berwald Roofing Co. 
   type: Business Corporation (Domestic)
+  extra:
+    trade_as: 
+    founded: 1965
+    headquarters: Minnesota
+    key_people: 
+    revenue: 
+    operating_income: 
+    net_income: 
+    total_assets: 
+    total_equity: 
+    number_of_employees: 
+    website:
   industry: Construction Management
   risk_score: 23
   sites:
@@ -84,8 +207,22 @@
       risk_score: 29
       reports: [4, 5, 1, 8]
 
+# ===============================================================
+
 - title: Clau Chin Construction LLC
   type: Domestic Corp
+  extra:
+    trade_as: 
+    founded: 2007
+    headquarters: Nebraska
+    key_people: 
+    revenue: 
+    operating_income: 
+    net_income: 
+    total_assets: 
+    total_equity: 
+    number_of_employees: 
+    website:
   industry: Construction Management
   risk_score: 71
   sites:
@@ -96,10 +233,59 @@
       risk_score: 75
       reports: [10, 3]
 
+# ===============================================================
+
 - title: Harco Construction LLC
   type: Domestic LLC
+  extra:
+    trade_as: 
+    founded: 2009
+    headquarters: New York
+    key_people: 
+    revenue: 
+    operating_income: 
+    net_income: 
+    total_assets: 
+    total_equity: 
+    number_of_employees: 
+    website:
   industry: Construction Management
   risk_score: 58
+  sites:
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 17
+      reports: [3, 5, 9]
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 44
+      reports: [9, 4, 6, 2, 1]
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 56
+      reports: [1, 2, 4, 6, 7]
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 81
+      reports: [2, 4, 8, 6]
+    - address: 100 Huron st, Brooklyn, NY 11211
+      risk_score: 92
+      reports: [0, 4, 10]
+
+# ===============================================================
+
+- title: Larry Kessler Construction LLC
+  type: Domestic LLC
+  extra:
+    trade_as: 
+    founded: 2004
+    headquarters: Nebraska
+    key_people: 
+    revenue: 
+    operating_income: 
+    net_income: 
+    total_assets: 
+    total_equity: 
+    number_of_employees: 
+    website:
+  industry: 
+  risk_score: 53
   sites:
     - address: 100 Huron st, Brooklyn, NY 11211
       risk_score: 17
