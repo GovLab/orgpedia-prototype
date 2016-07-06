@@ -227,7 +227,7 @@ button.button {
       .safety-score__percentage h1 span {
         font-size: 3rem; }
   .safety-score--medium {
-    background-color: #ffae17; }
+    background-color: #ff5900; }
     .safety-score--medium h2:after {
       content: "Medium Risk"; }
   .safety-score--low {
@@ -605,10 +605,26 @@ a {
   margin-top: 20px;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 4px; }
+  padding: 4px;
+  overflow: hidden; }
+  .company-extra-info .more-info {
+    cursor: pointer;
+    padding: 2px 0; }
+    .company-extra-info .more-info:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
   .company-extra-info i {
     vertical-align: middle;
     color: rgba(0, 0, 0, 0.4); }
+  .company-extra-info .columns {
+    display: none; }
+    .company-extra-info .columns p {
+      color: rgba(0, 0, 0, 0.4);
+      margin: 2px 0; }
+    .company-extra-info .columns span {
+      font-weight: bold; }
+    .company-extra-info .columns a {
+      color: rgba(0, 0, 0, 0.4);
+      text-decoration: underline; }
 
 .company-sites > h2 {
   text-transform: uppercase;
