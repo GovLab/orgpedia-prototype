@@ -289,9 +289,9 @@ button.button {
       color: #bd0100; }
 
 .site-card--medium {
-  border-color: #ffae17; }
+  border-color: #ff5900; }
   .site-card--medium .site-card__title {
-    background-color: rgba(255, 174, 23, 0.1); }
+    background-color: rgba(255, 89, 0, 0.1); }
 
 .site-card--high {
   border-color: #bd0100; }
@@ -533,16 +533,16 @@ a {
     border-bottom: 3px solid transparent;
     border-right: 3px solid transparent; }
   .company-card--risk-medium {
-    border-color: #ffae17; }
+    border-color: #ff5900; }
     .company-card--risk-medium h1 {
-      color: #ffae17;
-      background-color: rgba(255, 174, 23, 0.1); }
+      color: #ff5900;
+      background-color: rgba(255, 89, 0, 0.1); }
     .company-card--risk-medium .risk-label:after {
       content: "Medium Risk";
-      background-color: #ffae17; }
+      background-color: #ff5900; }
     .company-card--risk-medium .risk-label:before {
-      border-left-color: #ca8300;
-      border-top-color: #ca8300; }
+      border-left-color: #b33e00;
+      border-top-color: #b33e00; }
   .company-card--risk-high {
     border-color: #bd0100; }
     .company-card--risk-high h1 {
@@ -618,6 +618,9 @@ a {
   .company-extra-info .columns {
     display: none; }
     .company-extra-info .columns p {
+      display: inline-block;
+      width: 50%;
+      float: left;
       color: rgba(0, 0, 0, 0.4);
       margin: 2px 0; }
     .company-extra-info .columns span {
