@@ -76,6 +76,9 @@
     display: none;
 
     p {
+      display: inline-block;
+      width: 50%;
+      float: left
       color: rgba($black, .4);
       margin: 2px 0;
     }

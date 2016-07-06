@@ -2,11 +2,11 @@
   display: inline-block;
   border: 1px solid rgba($black, .2);
 
-  .contractors-list { 
-    padding: 0 30px; 
+  .contractors-list {
+    padding: 0 30px;
     color: rgba($black, .4);
   }
-  
+
   &__title {
     background-color: rgba($black, .1);
     padding: 15px 20px;
@@ -34,13 +34,13 @@
     color: rgba($black, .6);
 
   }
-  
+
   .safety-report {
     padding: 15px 30px 15px 70px;
     position: relative;
 
 
-    
+
     &__meta {
       font-size: .7rem;
       font-style: italic;
@@ -74,9 +74,9 @@
 }
 
 .site-card--medium {
-  border-color: $yellow;
+  border-color: $orange;
   .site-card__title {
-    background-color: rgba($yellow, .1);
+    background-color: rgba($orange, .1);
   }
 }
 

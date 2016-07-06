@@ -19,7 +19,7 @@ $card-padding: 20px;
 .company-card {
   display: block;
   border: 1px solid rgba($black, .2);
-  
+
   h1 {
     padding: 10px 20px;
     margin: 0;
@@ -65,7 +65,7 @@ $card-padding: 20px;
     color: rgba($black, .5);
   }
 
-  .risk-label { 
+  .risk-label {
     text-align: right;
     padding: 0;
     position: relative;
@@ -100,25 +100,25 @@ $card-padding: 20px;
     border-right: 3px solid transparent;
   }
 
-  
+
 
   // Sets text and colors for the index cards
   &--risk-medium {
-    border-color: $yellow;
+    border-color: $orange;
 
     h1 {
-      color: $yellow;
-      background-color: rgba($yellow, .1);
+      color: $orange;
+      background-color: rgba($orange, .1);
     }
 
     .risk-label:after {
       content: "Medium Risk";
-      background-color: $yellow;
+      background-color: $orange;
     }
 
     .risk-label:before {
-      border-left-color: darken($yellow, 15);
-      border-top-color: darken($yellow, 15);
+      border-left-color: darken($orange, 15);
+      border-top-color: darken($orange, 15);
     }
   }
 
@@ -129,7 +129,7 @@ $card-padding: 20px;
       color: $red;
       background-color: rgba($red, .1);
     }
-    
+
     .risk-label:after {
       content: "High Risk";
       background-color: $red;
@@ -149,7 +149,7 @@ $card-padding: 20px;
       color: $green;
       background-color: rgba($green, .1);
     }
-    
+
     .risk-label:after {
       content: "Low Risk";
       background-color: $green;
