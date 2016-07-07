@@ -1,4 +1,4 @@
-.u-clearfix:after, .safety-score:after {
+.u-clearfix:after, .safety-score:after, .company-extra-info .columns:after {
   content: " ";
   /* Older browser do not support empty content */
   visibility: hidden;
@@ -103,7 +103,7 @@ input {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.u-transition, .main-search input[type="text"], .main-search input[type="text"]:focus, .main-search input[type="submit"], .main-search input[type="submit"]:hover, .top-bar__search input[type="text"], .top-bar__search input[type="text"]:focus {
+.u-transition, .main-search input[type="text"], .main-search input[type="text"]:focus, .main-search input[type="submit"], .main-search input[type="submit"]:hover, .top-bar__search input[type="text"], .top-bar__search input[type="text"]:focus, .company-card, .company-card:hover {
   transition: all .3s ease; }
 
 #overlay {
@@ -241,7 +241,8 @@ button.button {
 
 .site-card {
   display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.2); }
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100%; }
   .site-card .contractors-list {
     padding: 0 30px;
     color: rgba(0, 0, 0, 0.4); }
@@ -306,7 +307,8 @@ button.button {
 .add-report {
   background-color: rgba(0, 0, 0, 0.07);
   padding: 30% 0 98%;
-  text-align: center; }
+  text-align: center;
+  height: 100%; }
   .add-report h2 {
     text-transform: uppercase;
     margin-top: 20px;
@@ -474,12 +476,17 @@ a {
 .company-card {
   display: block;
   border: 1px solid rgba(0, 0, 0, 0.2); }
+  .company-card:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); }
   .company-card h1 {
     padding: 10px 20px;
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.3;
     background-color: rgba(0, 0, 0, 0.1); }
+  .company-card__location {
+    padding: 0 20px;
+    opacity: .6; }
   .company-card .active-sites {
     margin: 20px; }
     .company-card .active-sites p {
@@ -604,27 +611,27 @@ a {
 .company-extra-info {
   margin-top: 20px;
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 4px;
+  border: 1px solid #ffae17;
   overflow: hidden; }
   .company-extra-info .more-info {
     cursor: pointer;
-    padding: 2px 0; }
+    padding: 4px; }
     .company-extra-info .more-info:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
+      background-color: #ffae17;
+      color: #fff; }
   .company-extra-info i {
     vertical-align: middle;
-    color: rgba(0, 0, 0, 0.4); }
+    color: currentColor; }
   .company-extra-info .columns {
-    display: none; }
+    display: none;
+    padding: 20px; }
     .company-extra-info .columns p {
       display: inline-block;
       width: 50%;
       float: left;
-      color: rgba(0, 0, 0, 0.4);
-      margin: 2px 0; }
-    .company-extra-info .columns span {
-      font-weight: bold; }
+      color: rgba(0, 0, 0, 0.6);
+      margin: 2px 0;
+      text-align: left; }
     .company-extra-info .columns a {
       color: rgba(0, 0, 0, 0.4);
       text-decoration: underline; }
@@ -637,9 +644,14 @@ a {
     float: right;
     margin-right: 5px; }
 
+.company-sites__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; }
+
 .company-sites__container {
-  width: calc(50% - 3px);
-  display: inline-block;
+  flex: 1;
+  flex-basis: 50%;
   padding-bottom: 20px;
   vertical-align: top; }
   .company-sites__container:nth-of-type(2n) {
