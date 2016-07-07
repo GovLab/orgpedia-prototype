@@ -54,37 +54,39 @@
   @extend .u-wrapper;
   margin-top: 20px;
   text-align: center;
-  border: 1px solid rgba($black, .2);
-  padding: 4px;
+  border: 1px solid $yellow;
+  // padding: 4px;
   overflow: hidden;
 
   .more-info {
     cursor: pointer;
-    padding: 2px 0;
+    padding: 4px;
+    
 
     &:hover {
-      background-color: rgba($black, .05);
+      background-color: $yellow;
+      color: $white;
+
     }
   }
 
   i {
     vertical-align: middle;
-    color: rgba($black, .4);
+    color: currentColor;
   }
 
   .columns {
     display: none;
+    padding: 20px;
+    @extend .u-clearfix;
 
     p {
       display: inline-block;
       width: 50%;
-      float: left
-      color: rgba($black, .4);
+      float: left;
+      color: rgba($black, .6);
       margin: 2px 0;
-    }
-
-    span {
-      font-weight: bold;
+      text-align: left;
     }
 
     a {
@@ -98,6 +100,7 @@
 .company-sites {
   @extend .u-wrapper;
 
+
   > h2 {
     text-transform: uppercase;
     font-weight: bold;
@@ -109,9 +112,16 @@
     }
   }
 
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  
   &__container {
-    width: calc(50% - 3px);
-    display: inline-block;
+    flex: 1;
+    flex-basis: 50%;
+    
     padding-bottom: 20px;
     vertical-align: top;
 

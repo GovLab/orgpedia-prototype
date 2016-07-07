@@ -1,6 +1,7 @@
 .site-card {
   display: inline-block;
   border: 1px solid rgba($black, .2);
+  height: 100%;
 
   .contractors-list {
     padding: 0 30px;
@@ -98,6 +99,7 @@
   background-color: rgba($black, .07);
   padding: 30% 0 98%;
   text-align: center;
+  height: 100%;
 
   h2 {
     text-transform: uppercase;

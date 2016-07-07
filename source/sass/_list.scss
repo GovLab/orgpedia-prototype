@@ -19,6 +19,12 @@ $card-padding: 20px;
 .company-card {
   display: block;
   border: 1px solid rgba($black, .2);
+  @extend .u-transition;
+
+  &:hover {
+    box-shadow: 3px 3px 10px rgba($black, .2);
+    @extend .u-transition;
+  }
 
   h1 {
     padding: 10px 20px;
@@ -26,7 +32,11 @@ $card-padding: 20px;
     font-size: 1.1rem;
     line-height: 1.3;
     background-color: rgba($black, .1);
+  }
 
+  &__location { 
+    padding: 0 20px; 
+    opacity: .6;
   }
 
   .active-sites {
@@ -53,8 +63,6 @@ $card-padding: 20px;
       font-weight: 100;
       font-size: 2rem;
     }
-
-
   }
 
   footer {

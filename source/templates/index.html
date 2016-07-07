@@ -15,6 +15,7 @@
             <div class="company-list-controls">
                 <button class="button button--small sort" data-sort="name">Sort by Name</button>
                 <button class="button button--small sort" data-sort="score">Sort by Score</button>
+                <button class="button button--small sort" data-sort="location">Sort by Location</button>
             </div>
         </div>
         <div class="about">
@@ -42,6 +43,10 @@
                     <section class="active-sites">
                         <p><span>{{i.sites.length}}</span> Active Sites</p>
                     </section>
+                    <section class="company-card__location">
+                        <p class="location">{{i.extra.headquarters}}</p>
+                    </section>
+
                     <footer>Last Report: Jun, 30</footer>
                 </a>
             </li>
@@ -58,7 +63,7 @@
 
 {% block scripts %}
 var options = {
-  valueNames: [ 'name', 'score' ]
+  valueNames: [ 'name', 'score', 'location' ]
 };
 
 var myList = new List('homepage', options);

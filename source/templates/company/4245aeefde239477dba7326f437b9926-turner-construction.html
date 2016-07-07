@@ -48,17 +48,17 @@
         <p class="more-info"><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
         <div class="columns">
             <div class="column">
-                {% if extra.trade_as %}<p><span>Trade as:</span> {{extra.trade_as}}</p>{% endif %}
-                {% if extra.founded %}<p><span>Founded:</span> {{extra.founded}}</p>{% endif %}
-                {% if extra.headquarters %}<p><span>Headquarters:</span> {{extra.headquarters}}</p>{% endif %}
-                {% if extra.key_people %}<p><span>Key people:</span> {{extra.key_people}}</p>{% endif %}
-                {% if extra.revenue %}<p><span>Revenue:</span> {{extra.revenue}}</p>{% endif %}
-                {% if extra.operating_income %}<p><span>Operating income:</span> {{extra.operating_income}}</p>{% endif %}
-                {% if extra.net_income %}<p><span>Net income:</span> {{extra.net_income}}</p>{% endif %}
-                {% if extra.total_assets %}<p><span>Total assets:</span> {{extra.total_assets}}</p>{% endif %}
-                {% if extra.total_equity %}<p><span>Total equity:</span> {{extra.total_equity}}</p>{% endif %}
-                {% if extra.number_of_employees %}<p><span>Number of employees:</span> {{extra.number_of_employees}}</p>{% endif %}
-                {% if extra.website %}<p><span>Website:</span> <a href="{{extra.website}}">{{extra.website}}</a></p>{% endif %}
+                {% if extra.trade_as %}<p><strong>Trade as:</strong> {{extra.trade_as}}</p>{% endif %}
+                {% if extra.founded %}<p><strong>Founded:</strong> {{extra.founded}}</p>{% endif %}
+                {% if extra.headquarters %}<p><strong>Headquarters:</strong> {{extra.headquarters}}</p>{% endif %}
+                {% if extra.key_people %}<p><strong>Key people:</strong> {{extra.key_people}}</p>{% endif %}
+                {% if extra.revenue %}<p><strong>Revenue:</strong> {{extra.revenue}}</p>{% endif %}
+                {% if extra.operating_income %}<p><strong>Operating income:</strong> {{extra.operating_income}}</p>{% endif %}
+                {% if extra.net_income %}<p><strong>Net income:</strong> {{extra.net_income}}</p>{% endif %}
+                {% if extra.total_assets %}<p><strong>Total assets:</strong> {{extra.total_assets}}</p>{% endif %}
+                {% if extra.total_equity %}<p><strong>Total equity:</strong> {{extra.total_equity}}</p>{% endif %}
+                {% if extra.number_of_employees %}<p><strong>Number of employees:</strong> {{extra.number_of_employees}}</p>{% endif %}
+                {% if extra.website %}<p><strong>Website:</strong> <a href="{{extra.website}}" target="_blank">{{extra.website}}</a></p>{% endif %}
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@
 <section id="sites" class="company-sites page-section">
     <h2>Sites <span class="button button--small sort" data-sort="score">Sort by Score</span></h2>
 
-    <ul class="list">
+    <ul class="list company-sites__list">
     {% for i in sites %}
     <li class="company-sites__container">
         <article class="site-card site-card--{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}">
@@ -105,15 +105,16 @@
         </article>
     </li>
     {% endfor %}
-    </ul>
-
-    <div class="company-sites__container">
+    <li class="company-sites__container">
         <article class="add-report">
             <i class="material-icons">add_circle_outline</i>
             <h2>Add Report</h2>
 
         </article>
-    </div>
+    </li>
+    </ul>
+
+    
 
 </section>
 {% endblock %}

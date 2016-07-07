@@ -4,9 +4,9 @@
   type: Domestic Business Corporation
   extra:
     trade_as: "NYSE: KBR"
-    founded: [1901 M.W. Kellogg, 1940's Brown & Root, 1962 Halliburton, "2006 KBR, Inc."]
+    founded: 1901 M.W. Kellogg, 1940's Brown & Root, 1962 Halliburton, "2006 KBR, Inc."
     headquarters: KBR Tower Houston, Texas, U.S.
-    key_people: ["Stuart Bradie, CEO (June 2014)", "Brian Ferraioli, CFO"]
+    key_people: Stuart Bradie, CEO (June 2014), Brian Ferraioli, CFO
     revenue: $7.2 billion (FY 2013)
     operating_income: $308 million (FY 2013)
     net_income: $75 million (FY 2013)
@@ -52,12 +52,10 @@
 - title: Turner Construction
   type: Domestic Business Corporation
   extra:
-    Headquarters: NEW YORK
-    Revenue: $10 billion (2014)
-    trade_as: "NYSE: KBR"
-    founded: [1902]
     headquarters: New York
-    revenue: $10 billion (FY 2014)
+    revenue: $10 billion (2014)
+    trade_as: "NYSE: KBR"
+    founded: 1902
     number_of_employees: 5200 (2014)
 
   subsidiaries:
