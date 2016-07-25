@@ -10,7 +10,7 @@
             </hgroup>
             
             <form action="/" class="main-search">
-                <input class="search" placeholder="Search for a company or site, to see it's safety risk" type="text"><input type="submit" value="search">
+                <input class="search" placeholder="Search for a company or site, to see its safety score" type="text"><input type="submit" value="search">
             </form>
             <div class="company-list-controls">
                 <button class="button button--small sort" data-sort="name">Sort by Name</button>
@@ -35,10 +35,10 @@
         <ul class="list">
             {% for i in company %}
             <li>
-                <a class="company-card company-card--risk-{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}" href="./{{i.id}}-{{i.title | slug}}.html">
+                <a class="company-card company-card--safety-{% if i.safety_score < 35 %}low{% elif i.safety_score > 65 %}high{% else %}medium{% endif %}" href="./{{i.id}}-{{i.title | slug}}.html">
                     <h1 class="name">{{i.title}}</h1>
-                    <div class="risk-label score">
-                        <span>{{i.risk_score}}</span>
+                    <div class="safety-label score">
+                        <span>{{i.safety_score}}</span>
                         {# Content added by CSS Pseudo Elements #}
                     </div>
                     <section class="active-sites">

@@ -227,17 +227,17 @@ button.button {
       .safety-score__percentage h1 span {
         font-size: 3rem; }
   .safety-score--medium {
-    background-color: #ff5900; }
+    background-color: #ffae17; }
     .safety-score--medium h2:after {
-      content: "Medium Risk"; }
-  .safety-score--low {
-    background-color: #8cae17; }
-    .safety-score--low h2:after {
-      content: "Low Risk"; }
+      content: "Medium Safety"; }
   .safety-score--high {
-    background-color: #bd0100; }
+    background-color: #8cae17; }
     .safety-score--high h2:after {
-      content: "High Risk"; }
+      content: "High Safety"; }
+  .safety-score--low {
+    background-color: #bd0100; }
+    .safety-score--low h2:after {
+      content: "Low Safety"; }
 
 .site-card {
   display: inline-block;
@@ -290,18 +290,18 @@ button.button {
       color: #bd0100; }
 
 .site-card--medium {
-  border-color: #ff5900; }
+  border-color: #ffae17; }
   .site-card--medium .site-card__title {
-    background-color: rgba(255, 89, 0, 0.1); }
-
-.site-card--high {
-  border-color: #bd0100; }
-  .site-card--high .site-card__title {
-    background-color: rgba(189, 1, 0, 0.1); }
+    background-color: rgba(255, 174, 23, 0.1); }
 
 .site-card--low {
-  border-color: #8cae17; }
+  border-color: #bd0100; }
   .site-card--low .site-card__title {
+    background-color: rgba(189, 1, 0, 0.1); }
+
+.site-card--high {
+  border-color: #8cae17; }
+  .site-card--high .site-card__title {
     background-color: rgba(140, 174, 23, 0.1); }
 
 .add-report {
@@ -514,21 +514,21 @@ a {
     font-size: .8rem;
     font-style: italic;
     color: rgba(0, 0, 0, 0.5); }
-  .company-card .risk-label {
+  .company-card .safety-label {
     text-align: right;
     padding: 0;
     position: relative; }
-    .company-card .risk-label > span {
+    .company-card .safety-label > span {
       display: none; }
-  .company-card .risk-label:after {
-    content: "Sample Risk";
+  .company-card .safety-label:after {
+    content: "Sample Safety";
     padding: 8px 15px;
     margin-right: -6px;
     color: #fff;
     letter-spacing: .5px;
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2); }
-  .company-card .risk-label:before {
+  .company-card .safety-label:before {
     content: "";
     position: absolute;
     right: -6px;
@@ -539,37 +539,37 @@ a {
     border-top: 3px solid rgba(0, 0, 0, 0.3);
     border-bottom: 3px solid transparent;
     border-right: 3px solid transparent; }
-  .company-card--risk-medium {
-    border-color: #ff5900; }
-    .company-card--risk-medium h1 {
-      color: #ff5900;
-      background-color: rgba(255, 89, 0, 0.1); }
-    .company-card--risk-medium .risk-label:after {
-      content: "Medium Risk";
-      background-color: #ff5900; }
-    .company-card--risk-medium .risk-label:before {
-      border-left-color: #b33e00;
-      border-top-color: #b33e00; }
-  .company-card--risk-high {
+  .company-card--safety-medium {
+    border-color: #ffae17; }
+    .company-card--safety-medium h1 {
+      color: #ffae17;
+      background-color: rgba(255, 174, 23, 0.1); }
+    .company-card--safety-medium .safety-label:after {
+      content: "Medium Safety";
+      background-color: #ffae17; }
+    .company-card--safety-medium .safety-label:before {
+      border-left-color: #ca8300;
+      border-top-color: #ca8300; }
+  .company-card--safety-low {
     border-color: #bd0100; }
-    .company-card--risk-high h1 {
+    .company-card--safety-low h1 {
       color: #bd0100;
       background-color: rgba(189, 1, 0, 0.1); }
-    .company-card--risk-high .risk-label:after {
-      content: "High Risk";
+    .company-card--safety-low .safety-label:after {
+      content: "Low Safety";
       background-color: #bd0100; }
-    .company-card--risk-high .risk-label:before {
+    .company-card--safety-low .safety-label:before {
       border-left-color: #710100;
       border-top-color: #710100; }
-  .company-card--risk-low {
+  .company-card--safety-high {
     border-color: #8cae17; }
-    .company-card--risk-low h1 {
+    .company-card--safety-high h1 {
       color: #8cae17;
       background-color: rgba(140, 174, 23, 0.1); }
-    .company-card--risk-low .risk-label:after {
-      content: "Low Risk";
+    .company-card--safety-high .safety-label:after {
+      content: "High Safety";
       background-color: #8cae17; }
-    .company-card--risk-low .risk-label:before {
+    .company-card--safety-high .safety-label:before {
       border-left-color: #566a0e;
       border-top-color: #566a0e; }
 

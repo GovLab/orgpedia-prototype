@@ -13,7 +13,7 @@
 </div>
 
 <div class="breadcrumbs">
-    <a href="../">Home</a><i class="material-icons">keyboard_arrow_right</i><span>{{title}}</span>
+    <a href="./">Home</a><i class="material-icons">keyboard_arrow_right</i><span>{{title}}</span>
 </div>
 
 <header class="company-header page-section">
@@ -32,12 +32,12 @@
     </div>
     <div class="right-panel">
         <h3>Company Safety Score <i class="material-icons">info_outline</i></h3>
-        <div class="safety-score safety-score--{% if risk_score < 35 %}high{% elif risk_score > 65 %}low{% else %}medium{% endif %}">
+        <div class="safety-score safety-score--{% if safety_score < 35 %}low{% elif safety_score > 65 %}high{% else %}medium{% endif %}">
             <div class="safety-score__percentage">
-                <h5>Risk Score</h5>
-                <h1>{{risk_score}}<span>%</span></h1>
+                <h5>Safety Score</h5>
+                <h1>{{safety_score}}<span>%</span></h1>
             </div>
-            <h2>{# Risk Text inserted by CSS #}</h2>
+            <h2>{# Safety Text inserted by CSS #}</h2>
             <h4>based on 9 reports from 3 worksites</h4>
         </div>
     </div>
@@ -70,16 +70,16 @@
     <ul class="list company-sites__list">
     {% for i in sites %}
     <li class="company-sites__container">
-        <article class="site-card site-card--{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}">
+        <article class="site-card site-card--{% if i.safety_score < 35 %}low{% elif i.safety_score > 65 %}high{% else %}medium{% endif %}">
             <h1 class="site-card__title">{{i.address}}</h1>
             <section>
                 <h2>Site Safety Score</h2>
-                <div class="safety-score safety-score--{% if i.risk_score < 35 %}high{% elif i.risk_score > 65 %}low{% else %}medium{% endif %}">
+                <div class="safety-score safety-score--{% if i.safety_score < 35 %}low{% elif i.safety_score > 65 %}high{% else %}medium{% endif %}">
                     <div class="safety-score__percentage">
-                        <h5>Risk Score</h5>
-                        <h1 class="score">{{i.risk_score}}<span>%</span></h1>
+                        <h5>Safety Score</h5>
+                        <h1 class="score">{{i.safety_score}}<span>%</span></h1>
                     </div>
-                    <h2>{# Risk Text inserted by CSS #}</h2>
+                    <h2>{# Safety Text inserted by CSS #}</h2>
                     <h4>based on {{i.reports.length}} reports</h4>
                 </div>
             </section>

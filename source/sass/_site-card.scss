@@ -75,20 +75,20 @@
 }
 
 .site-card--medium {
-  border-color: $orange;
+  border-color: $yellow;
   .site-card__title {
-    background-color: rgba($orange, .1);
+    background-color: rgba($yellow, .1);
   }
 }
 
-.site-card--high {
+.site-card--low {
   border-color: $red;
   .site-card__title {
     background-color: rgba($red, .1);
   }
 }
 
-.site-card--low {
+.site-card--high {
   border-color: $green;
   .site-card__title {
     background-color: rgba($green, .1);
