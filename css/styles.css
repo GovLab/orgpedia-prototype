@@ -641,8 +641,7 @@ a {
   font-weight: bold;
   color: rgba(0, 0, 0, 0.4); }
   .company-sites > h2 .button {
-    float: right;
-    margin-right: 5px; }
+    float: right; }
 
 .company-sites__list {
   display: flex;
