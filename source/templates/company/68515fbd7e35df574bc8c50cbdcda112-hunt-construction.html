@@ -33,12 +33,12 @@
     <div class="right-panel">
         <h3>Company Safety Score <i class="material-icons">info_outline</i></h3>
         <div class="safety-score safety-score--{% if safety_score < 35 %}low{% elif safety_score > 65 %}high{% else %}medium{% endif %}">
-            <div class="safety-score__percentage">
+            <!-- <div class="safety-score__percentage">
                 <h5>Safety Score</h5>
                 <h1>{{safety_score}}<span>%</span></h1>
-            </div>
+            </div> -->
             <h2>{# Safety Text inserted by CSS #}</h2>
-            <h4>based on 9 reports from 3 worksites</h4>
+            <h4>based on 9 reports from 3 worksites<br>collected at a response rate of 91%</h4>
         </div>
     </div>
 </header>
@@ -75,12 +75,12 @@
             <section>
                 <h2>Site Safety Score</h2>
                 <div class="safety-score safety-score--{% if i.safety_score < 35 %}low{% elif i.safety_score > 65 %}high{% else %}medium{% endif %}">
-                    <div class="safety-score__percentage">
+                   <!--  <div class="safety-score__percentage">
                         <h5>Safety Score</h5>
                         <h1 class="score">{{i.safety_score}}<span>%</span></h1>
-                    </div>
+                    </div> -->
                     <h2>{# Safety Text inserted by CSS #}</h2>
-                    <h4>based on {{i.reports.length}} reports</h4>
+                    <h4>based on {{i.reports.length}} reports<br>91% response rate</h4>
                 </div>
             </section>
 
