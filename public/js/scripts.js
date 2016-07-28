@@ -27,7 +27,7 @@ $('.m-next').click(function() {
     $(this).closest('.e-testimonial-item').slick('slickNext');
 });
 
-$('.company-extra-info .more-info').click(function() {
+$('.more-info').click(function() {
     if ($(this).children('.material-icons').text() == 'add_circle_outline') {
         $(this).children('.material-icons').text('remove_circle_outline');
 
@@ -35,7 +35,7 @@ $('.company-extra-info .more-info').click(function() {
         $(this).children('.material-icons').text('add_circle_outline');
     }
 
-    $(this).siblings('.columns').slideToggle();
+    $('.company-extra-info .columns').slideToggle();
 });
 
 

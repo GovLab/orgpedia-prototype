@@ -17,7 +17,7 @@
   h4 {
     font-style: italic;
     font-weight: 100;
-    color: rgba($white, .4);
+    color: rgba($white, .6);
     margin: 10px 0;
   }
 
@@ -46,18 +46,18 @@
   }
 
   &--medium {
-    background-color: $orange;
-    h2:after { content: "Medium Risk"; }
-  }
-
-  &--low {
-    background-color: $green;
-    h2:after { content: "Low Risk"; }
+    background-color: $yellow;
+    h2:after { content: "Medium Safety"; }
   }
 
   &--high {
+    background-color: $green;
+    h2:after { content: "High Safety"; }
+  }
+
+  &--low {
     background-color: $red;
-    h2:after { content: "High Risk"; }
+    h2:after { content: "Low Safety"; }
   }
 
 }

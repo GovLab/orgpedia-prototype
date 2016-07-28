@@ -34,6 +34,15 @@
         padding: 5px 8px;
         font-size: .8rem;
     }
+
+    &--right {
+        float: right;
+    }
+
+    &--left {
+        float: left;
+    }
+
 }
 
 button.button {

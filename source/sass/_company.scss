@@ -1,97 +1,140 @@
-.company-header {
-  @extend .u-wrapper;
-  display: flex;
+.header {
 
-  .left-panel,
-  .right-panel { flex: 1; }
+    background-image: url("../img/graph-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height:610px;
+    padding-bottom:85px;
 
-  .left-panel { padding-right: 25px; }
-
-  .right-panel { padding-left: 25px; }
-
-  &__name {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: $dark-blue;
-  }
-
-  h3 {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: rgba($black, .4);
-    margin-top: 23px;
-    margin-bottom: 20px;
-
-    i {
-      vertical-align: middle;
-      font-size: 1.3rem;
-      color: $dark-blue;
-    }
-  }
-
-  &__info {
-    display: flex;
-
-    p {
-      color: rgba($black, .4);
-      margin-bottom: 10px;
+    &--medium {
+      background-color: $yellow;
     }
 
-    &__key {
-      width: 20%;
-      p {
+    &--high {
+      background-color: $green;
+    }
+
+    &--low {
+      background-color: $red;
+    }
+
+    .company-header {
+      @extend .u-wrapper;
+      display: flex;
+
+
+      .left-panel,
+      .right-panel { flex: 1; }
+
+      .left-panel { padding-right: 25px; }
+
+      .right-panel { 
+
+        padding-left: 25px;
+
+        .safety-score {
+          text-align:right;
+          padding:0;
+          background-color:transparent;
+
+        }
+
+        .more-info{
+          cursor: pointer;
+          /*padding: 4px;*/
+          color: $white;
+          
+
+          &:hover {
+            background-color: transparent;
+            color: $white;
+          }
+        }
+
+      }
+
+      &__name {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: $white;
+      }
+
+      h3 {
+        text-transform: uppercase;
         font-weight: bold;
+        color: rgba(255, 255, 255, .6); /* temporarily */
+        margin-top: 23px;
+        margin-bottom: 20px;
+        text-align:right;
+
+        i {
+          vertical-align: middle;
+          font-size: 1.3rem;
+          color: $white;
+        }
+      }
+
+      &__info {
+        display: flex;
+
+        p {
+          color: rgba(255, 255, 255, .6); /* temporarily */
+          margin-bottom: 10px;
+        }
+
+        &__key {
+          width: 20%;
+          p {
+            font-weight: bold;
+          }
+        }
+
+        &__value {
+          flex: 1;
+        }
       }
     }
 
-    &__value {
-      flex: 1;
-    }
-  }
 }
 
 .company-extra-info {
-  @extend .u-wrapper;
+  // @extend .u-wrapper;
   margin-top: 20px;
-  text-align: center;
-  border: 1px solid $yellow;
-  // padding: 4px;
+  text-align: left;
+  /*border: 1px solid $yellow;*/
+  /*padding: 4px;*/
   overflow: hidden;
-
-  .more-info {
-    cursor: pointer;
-    padding: 4px;
-    
-
-    &:hover {
-      background-color: $yellow;
-      color: $white;
-
-    }
-  }
 
   i {
     vertical-align: middle;
-    color: currentColor;
+    color: $white;
   }
 
   .columns {
     display: none;
-    padding: 20px;
+    margin-top: 40px;
+    padding:20px;
+    background-color: rgba($black, .2);
     @extend .u-clearfix;
 
-    p {
-      display: inline-block;
-      width: 50%;
-      float: left;
-      color: rgba($black, .6);
-      margin: 2px 0;
-      text-align: left;
-    }
+    .column{
+      @extend .u-wrapper;
 
-    a {
-      color: rgba($black, .4);
-      text-decoration: underline;
+
+      p {
+        display: inline-block;
+        width: 50%;
+        float: left;
+        color: $white;
+        margin: 2px 0;
+        text-align: left;
+      }
+
+      a {
+        color: $white;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -108,7 +151,7 @@
 
     .button {
       float: right;
-      margin-right: 5px;
+      //margin-right: 5px;
     }
   }
 

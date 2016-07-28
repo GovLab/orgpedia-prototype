@@ -73,7 +73,7 @@ $card-padding: 20px;
     color: rgba($black, .5);
   }
 
-  .risk-label {
+  .safety-label {
     text-align: right;
     padding: 0;
     position: relative;
@@ -84,8 +84,8 @@ $card-padding: 20px;
     }
   }
 
-  .risk-label:after {
-    content: "Sample Risk";
+  .safety-label:after {
+    content: "Sample Safety";
     padding: 8px 15px;
     margin-right: -6px;
     color: $white;
@@ -95,7 +95,7 @@ $card-padding: 20px;
   }
 
 
-  .risk-label:before {
+  .safety-label:before {
     content: "";
     position: absolute;
     right: -6px;
@@ -111,26 +111,26 @@ $card-padding: 20px;
 
 
   // Sets text and colors for the index cards
-  &--risk-medium {
-    border-color: $orange;
+  &--safety-medium {
+    border-color: $yellow;
 
     h1 {
-      color: $orange;
-      background-color: rgba($orange, .1);
+      color: $yellow;
+      background-color: rgba($yellow, .1);
     }
 
-    .risk-label:after {
-      content: "Medium Risk";
-      background-color: $orange;
+    .safety-label:after {
+      content: "Medium Safety";
+      background-color: $yellow;
     }
 
-    .risk-label:before {
-      border-left-color: darken($orange, 15);
-      border-top-color: darken($orange, 15);
+    .safety-label:before {
+      border-left-color: darken($yellow, 15);
+      border-top-color: darken($yellow, 15);
     }
   }
 
-  &--risk-high {
+  &--safety-low {
     border-color: $red;
 
     h1 {
@@ -138,19 +138,19 @@ $card-padding: 20px;
       background-color: rgba($red, .1);
     }
 
-    .risk-label:after {
-      content: "High Risk";
+    .safety-label:after {
+      content: "Low Safety";
       background-color: $red;
     }
 
-    .risk-label:before {
+    .safety-label:before {
       border-left-color: darken($red, 15);
       border-top-color: darken($red, 15);
     }
 
   }
 
-  &--risk-low {
+  &--safety-high {
     border-color: $green;
 
     h1 {
@@ -158,12 +158,12 @@ $card-padding: 20px;
       background-color: rgba($green, .1);
     }
 
-    .risk-label:after {
-      content: "Low Risk";
+    .safety-label:after {
+      content: "High Safety";
       background-color: $green;
     }
 
-    .risk-label:before {
+    .safety-label:before {
       border-left-color: darken($green, 15);
       border-top-color: darken($green, 15);
     }

@@ -14,51 +14,59 @@
     <body>
         <main>
             
-<div class="top-bar">
-    <div class="wrapper">
-        <a href="./" class="top-bar__logo">Orgpedia</a>
-        <form action="" class="top-bar__search"><input type="text"><input type="submit" value="search"></form>
-        <nav class="top-bar__menu">
-            <a href="#" class="button button--small">API</a>
-            <a href="#" class="button button--small">About</a>
-        </nav>
-    </div>
-</div>
 
-<div class="breadcrumbs">
-    <a href="../">Home</a><i class="material-icons">keyboard_arrow_right</i><span>Tishman Construction</span>
-</div>
+<div class="header header--low">
 
-<header class="company-header page-section">
-    <div class="left-panel">
-        <h1 class="company-header__name">Tishman Construction</h1>
-        <div class="company-header__info">
-            <div class="company-header__info__key">
-                <p>Type</p>
-                <p>Industry</p>
-            </div>
-            <div class="company-header__info__value">
-                <p>Corporation</p>
-                <p>Construction Management</p>
-            </div>
+    <div class="top-bar">
+        <div class="wrapper">
+            <a href="./" class="top-bar__logo">Orgpedia</a>
+            <form action="" class="top-bar__search"><input type="text"><input type="submit" value="search" class="top-bar__low"></form>
+            <nav class="top-bar__menu">
+                <a href="#" class="button button--small">API</a>
+                <a href="#" class="button button--small">About</a>
+            </nav>
         </div>
     </div>
-    <div class="right-panel">
-        <h3>Company Safety Score <i class="material-icons">info_outline</i></h3>
-        <div class="safety-score safety-score--high">
-            <div class="safety-score__percentage">
-                <h5>Risk Score</h5>
-                <h1>30<span>%</span></h1>
+
+    <div class="breadcrumbs">
+        <a href="./">Home</a><i class="material-icons">keyboard_arrow_right</i><span>Tishman Construction</span>
+    </div>
+
+    <div class="company-header page-section">
+        <div class="left-panel">
+            <h1 class="company-header__name">Tishman Construction</h1>
+            <div class="company-header__info">
+                <div class="company-header__info__key">
+                    <p>Type</p>
+                    <p>Industry</p>
+                </div>
+                <div class="company-header__info__value">
+                    <p>Corporation</p>
+                    <p>Construction Management</p>
+                </div>
             </div>
+        </div>
+        <div class="right-panel">
+            <h3>Company Safety Score <i class="material-icons">info_outline</i></h3>
+            <div class="safety-score safety-score--low">
             <h2></h2>
-            <h4>based on 9 reports from 3 worksites</h4>
+            <h4>based on 9 reports from 3 worksites<br>collected at a response rate of 91%</h4>
+            </div>
         </div>
     </div>
-</header>
 
+    <div class="company-header page-section">
+        <div class="left-panel">
+            
+            <button class="button button--small button--left"><p class="more-info">more company information and subsidiaries</p></button>
+            
+        </div>
+        <div class="right-panel">
+            <button class="button button--small button--right"><p>Subscribe for Updates</p></button>
+        </div>
+    </div>
 
     <div class="company-extra-info">
-        <p class="more-info"><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
         <div class="columns">
             <div class="column">
                 
@@ -76,6 +84,27 @@
         </div>
     </div>
 
+    <!-- 
+        <div class="company-extra-info">
+            <p class="more-info"><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
+            <div class="columns">
+                <div class="column">
+                    
+                    <p><strong>Founded:</strong> 1965</p>
+                    <p><strong>Headquarters:</strong> Delaware</p>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+     -->
+</div>
 
 <section id="sites" class="company-sites page-section">
     <h2>Sites <span class="button button--small sort" data-sort="score">Sort by Score</span></h2>
@@ -88,12 +117,12 @@
             <section>
                 <h2>Site Safety Score</h2>
                 <div class="safety-score safety-score--medium">
-                    <div class="safety-score__percentage">
-                        <h5>Risk Score</h5>
+                   <!--  <div class="safety-score__percentage">
+                        <h5>Safety Score</h5>
                         <h1 class="score">56<span>%</span></h1>
-                    </div>
+                    </div> -->
                     <h2></h2>
-                    <h4>based on 3 reports</h4>
+                    <h4>based on 3 reports<br>91% response rate</h4>
                 </div>
             </section>
 
@@ -131,17 +160,17 @@
     </li>
     
     <li class="company-sites__container">
-        <article class="site-card site-card--high">
+        <article class="site-card site-card--low">
             <h1 class="site-card__title">100 Huron st, Brooklyn, NY 11211</h1>
             <section>
                 <h2>Site Safety Score</h2>
-                <div class="safety-score safety-score--high">
-                    <div class="safety-score__percentage">
-                        <h5>Risk Score</h5>
+                <div class="safety-score safety-score--low">
+                   <!--  <div class="safety-score__percentage">
+                        <h5>Safety Score</h5>
                         <h1 class="score">22<span>%</span></h1>
-                    </div>
+                    </div> -->
                     <h2></h2>
-                    <h4>based on 3 reports</h4>
+                    <h4>based on 3 reports<br>91% response rate</h4>
                 </div>
             </section>
 
@@ -179,17 +208,17 @@
     </li>
     
     <li class="company-sites__container">
-        <article class="site-card site-card--high">
+        <article class="site-card site-card--low">
             <h1 class="site-card__title">100 Huron st, Brooklyn, NY 11211</h1>
             <section>
                 <h2>Site Safety Score</h2>
-                <div class="safety-score safety-score--high">
-                    <div class="safety-score__percentage">
-                        <h5>Risk Score</h5>
+                <div class="safety-score safety-score--low">
+                   <!--  <div class="safety-score__percentage">
+                        <h5>Safety Score</h5>
                         <h1 class="score">12<span>%</span></h1>
-                    </div>
+                    </div> -->
                     <h2></h2>
-                    <h4>based on 4 reports</h4>
+                    <h4>based on 4 reports<br>91% response rate</h4>
                 </div>
             </section>
 
