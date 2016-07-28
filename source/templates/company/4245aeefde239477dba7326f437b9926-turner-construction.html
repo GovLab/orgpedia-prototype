@@ -1,51 +1,59 @@
 {% extends "_base.html" %}
 
 {% block content %}
-<div class="top-bar">
-    <div class="wrapper">
-        <a href="./" class="top-bar__logo">Orgpedia</a>
-        <form action="" class="top-bar__search"><input type="text"><input type="submit" value="search"></form>
-        <nav class="top-bar__menu">
-            <a href="#" class="button button--small">API</a>
-            <a href="#" class="button button--small">About</a>
-        </nav>
-    </div>
-</div>
 
-<div class="breadcrumbs">
-    <a href="./">Home</a><i class="material-icons">keyboard_arrow_right</i><span>{{title}}</span>
-</div>
+<div class="header header--{% if safety_score < 35 %}low{% elif safety_score > 65 %}high{% else %}medium{% endif %}">
 
-<header class="company-header page-section">
-    <div class="left-panel">
-        <h1 class="company-header__name">{{title}}</h1>
-        <div class="company-header__info">
-            <div class="company-header__info__key">
-                <p>Type</p>
-                <p>Industry</p>
-            </div>
-            <div class="company-header__info__value">
-                <p>{{type}}</p>
-                <p>{{industry}}</p>
-            </div>
+    <div class="top-bar">
+        <div class="wrapper">
+            <a href="./" class="top-bar__logo">Orgpedia</a>
+            <form action="" class="top-bar__search"><input type="text"><input type="submit" value="search" class="top-bar__{% if safety_score < 35 %}low{% elif safety_score > 65 %}high{% else %}medium{% endif %}"></form>
+            <nav class="top-bar__menu">
+                <a href="#" class="button button--small">API</a>
+                <a href="#" class="button button--small">About</a>
+            </nav>
         </div>
     </div>
-    <div class="right-panel">
-        <h3>Company Safety Score <i class="material-icons">info_outline</i></h3>
-        <div class="safety-score safety-score--{% if safety_score < 35 %}low{% elif safety_score > 65 %}high{% else %}medium{% endif %}">
-            <!-- <div class="safety-score__percentage">
-                <h5>Safety Score</h5>
-                <h1>{{safety_score}}<span>%</span></h1>
-            </div> -->
+
+    <div class="breadcrumbs">
+        <a href="./">Home</a><i class="material-icons">keyboard_arrow_right</i><span>{{title}}</span>
+    </div>
+
+    <div class="company-header page-section">
+        <div class="left-panel">
+            <h1 class="company-header__name">{{title}}</h1>
+            <div class="company-header__info">
+                <div class="company-header__info__key">
+                    <p>Type</p>
+                    <p>Industry</p>
+                </div>
+                <div class="company-header__info__value">
+                    <p>{{type}}</p>
+                    <p>{{industry}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h3>Company Safety Score <i class="material-icons">info_outline</i></h3>
+            <div class="safety-score safety-score--{% if safety_score < 35 %}low{% elif safety_score > 65 %}high{% else %}medium{% endif %}">
             <h2>{# Safety Text inserted by CSS #}</h2>
             <h4>based on 9 reports from 3 worksites<br>collected at a response rate of 91%</h4>
+            </div>
         </div>
     </div>
-</header>
 
-{% if extra %}
+    <div class="company-header page-section">
+        <div class="left-panel">
+            {% if extra %}
+            <button class="button button--small button--left"><p class="more-info">more company information and subsidiaries</p></button>
+            {% endif %}
+        </div>
+        <div class="right-panel">
+            <button class="button button--small button--right"><p>Subscribe for Updates</p></button>
+        </div>
+    </div>
+
     <div class="company-extra-info">
-        <p class="more-info"><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
         <div class="columns">
             <div class="column">
                 {% if extra.trade_as %}<p><strong>Trade as:</strong> {{extra.trade_as}}</p>{% endif %}
@@ -62,7 +70,28 @@
             </div>
         </div>
     </div>
-{% endif %}
+
+    <!-- {% if extra %}
+        <div class="company-extra-info">
+            <p class="more-info"><i class="material-icons">add_circle_outline</i> more company information and subsidiaries</p>
+            <div class="columns">
+                <div class="column">
+                    {% if extra.trade_as %}<p><strong>Trade as:</strong> {{extra.trade_as}}</p>{% endif %}
+                    {% if extra.founded %}<p><strong>Founded:</strong> {{extra.founded}}</p>{% endif %}
+                    {% if extra.headquarters %}<p><strong>Headquarters:</strong> {{extra.headquarters}}</p>{% endif %}
+                    {% if extra.key_people %}<p><strong>Key people:</strong> {{extra.key_people}}</p>{% endif %}
+                    {% if extra.revenue %}<p><strong>Revenue:</strong> {{extra.revenue}}</p>{% endif %}
+                    {% if extra.operating_income %}<p><strong>Operating income:</strong> {{extra.operating_income}}</p>{% endif %}
+                    {% if extra.net_income %}<p><strong>Net income:</strong> {{extra.net_income}}</p>{% endif %}
+                    {% if extra.total_assets %}<p><strong>Total assets:</strong> {{extra.total_assets}}</p>{% endif %}
+                    {% if extra.total_equity %}<p><strong>Total equity:</strong> {{extra.total_equity}}</p>{% endif %}
+                    {% if extra.number_of_employees %}<p><strong>Number of employees:</strong> {{extra.number_of_employees}}</p>{% endif %}
+                    {% if extra.website %}<p><strong>Website:</strong> <a href="{{extra.website}}" target="_blank">{{extra.website}}</a></p>{% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %} -->
+</div>
 
 <section id="sites" class="company-sites page-section">
     <h2>Sites <span class="button button--small sort" data-sort="score">Sort by Score</span></h2>

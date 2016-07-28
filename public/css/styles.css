@@ -94,7 +94,7 @@ input {
     :-ms-input-placeholder {
       text-align: center; } }
 
-.u-wrapper, .breadcrumbs, .wrapper, .company-list-controls, .company-list, .company-header, .company-extra-info, .company-sites {
+.u-wrapper, .breadcrumbs, .wrapper, .company-list-controls, .company-list, .header .company-header, .company-extra-info .columns .column, .company-sites {
   max-width: 960px;
   margin: 0 auto; }
 
@@ -146,6 +146,10 @@ input {
   .button--small {
     padding: 5px 8px;
     font-size: .8rem; }
+  .button--right {
+    float: right; }
+  .button--left {
+    float: left; }
 
 button.button {
   border: 0; }
@@ -154,9 +158,9 @@ button.button {
   padding-top: 20px; }
   .breadcrumbs > * {
     vertical-align: middle;
-    color: rgba(0, 0, 0, 0.4); }
+    color: #fff; }
   .breadcrumbs a:hover {
-    color: #ffae17; }
+    color: rgba(255, 255, 255, 0.4); }
 
 .main-search {
   padding: 30px 0;
@@ -205,7 +209,7 @@ button.button {
   .safety-score h4 {
     font-style: italic;
     font-weight: 100;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.6);
     margin: 10px 0; }
   .safety-score__percentage {
     float: right; }
@@ -320,7 +324,7 @@ button.button {
     color: rgba(0, 0, 0, 0.15); }
 
 .top-bar {
-  background-color: #ffae17;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 10px; }
   .top-bar > .wrapper {
     display: flex; }
@@ -348,7 +352,6 @@ button.button {
         background-color: rgba(255, 255, 255, 0.6); }
     .top-bar__search input[type="submit"] {
       background-color: #fff;
-      color: #ffae17;
       font-size: 1rem;
       padding: 5px;
       cursor: pointer; }
@@ -356,7 +359,15 @@ button.button {
     width: 25%;
     text-align: right; }
     .top-bar__menu .button {
-      background-color: #ff5900; }
+      background-color: rgba(0, 0, 0, 0.3); }
+    .top-bar__menu .button:hover {
+      background-color: rgba(0, 0, 0, 0.7); }
+  .top-bar__medium {
+    color: #ffae17; }
+  .top-bar__high {
+    color: #8cae17; }
+  .top-bar__low {
+    color: #bd0100; }
 
 .top-section {
   display: flex; }
@@ -573,67 +584,91 @@ a {
       border-left-color: #566a0e;
       border-top-color: #566a0e; }
 
-.company-header {
-  display: flex; }
-  .company-header .left-panel,
-  .company-header .right-panel {
-    flex: 1; }
-  .company-header .left-panel {
-    padding-right: 25px; }
-  .company-header .right-panel {
-    padding-left: 25px; }
-  .company-header__name {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #294e66; }
-  .company-header h3 {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.4);
-    margin-top: 23px;
-    margin-bottom: 20px; }
-    .company-header h3 i {
-      vertical-align: middle;
-      font-size: 1.3rem;
-      color: #294e66; }
-  .company-header__info {
+.header {
+  background-image: url("../img/graph-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  min-height: 610px;
+  padding-bottom: 85px; }
+  .header--medium {
+    background-color: #ffae17; }
+  .header--high {
+    background-color: #8cae17; }
+  .header--low {
+    background-color: #bd0100; }
+  .header .company-header {
     display: flex; }
-    .company-header__info p {
-      color: rgba(0, 0, 0, 0.4);
-      margin-bottom: 10px; }
-    .company-header__info__key {
-      width: 20%; }
-      .company-header__info__key p {
-        font-weight: bold; }
-    .company-header__info__value {
+    .header .company-header .left-panel,
+    .header .company-header .right-panel {
       flex: 1; }
+    .header .company-header .left-panel {
+      padding-right: 25px; }
+    .header .company-header .right-panel {
+      padding-left: 25px; }
+      .header .company-header .right-panel .safety-score {
+        text-align: right;
+        padding: 0;
+        background-color: transparent; }
+      .header .company-header .right-panel .more-info {
+        cursor: pointer;
+        /*padding: 4px;*/
+        color: #fff; }
+        .header .company-header .right-panel .more-info:hover {
+          background-color: transparent;
+          color: #fff; }
+    .header .company-header__name {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #fff; }
+    .header .company-header h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.6);
+      /* temporarily */
+      margin-top: 23px;
+      margin-bottom: 20px;
+      text-align: right; }
+      .header .company-header h3 i {
+        vertical-align: middle;
+        font-size: 1.3rem;
+        color: #fff; }
+    .header .company-header__info {
+      display: flex; }
+      .header .company-header__info p {
+        color: rgba(255, 255, 255, 0.6);
+        /* temporarily */
+        margin-bottom: 10px; }
+      .header .company-header__info__key {
+        width: 20%; }
+        .header .company-header__info__key p {
+          font-weight: bold; }
+      .header .company-header__info__value {
+        flex: 1; }
 
 .company-extra-info {
   margin-top: 20px;
-  text-align: center;
-  border: 1px solid #ffae17;
+  text-align: left;
+  /*border: 1px solid $yellow;*/
+  /*padding: 4px;*/
   overflow: hidden; }
-  .company-extra-info .more-info {
-    cursor: pointer;
-    padding: 4px; }
-    .company-extra-info .more-info:hover {
-      background-color: #ffae17;
-      color: #fff; }
   .company-extra-info i {
     vertical-align: middle;
-    color: currentColor; }
+    color: #fff; }
   .company-extra-info .columns {
     display: none;
-    padding: 20px; }
-    .company-extra-info .columns p {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2); }
+    .company-extra-info .columns .column p {
       display: inline-block;
       width: 50%;
       float: left;
-      color: rgba(0, 0, 0, 0.6);
+      color: #fff;
       margin: 2px 0;
       text-align: left; }
-    .company-extra-info .columns a {
-      color: rgba(0, 0, 0, 0.4);
+    .company-extra-info .columns .column a {
+      color: #fff;
       text-decoration: underline; }
 
 .company-sites > h2 {

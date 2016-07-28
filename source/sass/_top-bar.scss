@@ -1,5 +1,5 @@
 .top-bar {
-  background-color: $yellow;
+  background-color: rgba($black, .2);
   padding: 10px;
   > .wrapper { display: flex; }
 
@@ -40,7 +40,6 @@
 
     input[type="submit"] {
       background-color: $white;
-      color: $yellow;
       @extend .u-material-icons;
       font-size: 1rem;
       padding: 5px;
@@ -53,7 +52,23 @@
     text-align: right;
 
     .button {
-      background-color: $orange;
+      background-color: rgba($black, .3);
     }
+
+    .button:hover {
+      background-color: rgba($black, .7);
+    }
+  }
+
+  &__medium {
+    color: $yellow;
+  }
+
+  &__high {
+    color: $green;
+  }
+
+  &__low {
+    color: $red;
   }
 }
