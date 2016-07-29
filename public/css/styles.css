@@ -589,8 +589,8 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  min-height: 610px;
-  padding-bottom: 85px; }
+  padding-bottom: 10%;
+  background-blend-mode: screen; }
   .header--medium {
     background-color: #ffae17; }
   .header--high {
