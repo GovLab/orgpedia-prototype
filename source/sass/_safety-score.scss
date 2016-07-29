@@ -1,5 +1,10 @@
 .safety-score {
   background-color: rgba($black, .1);
+  background-image:url("../img/graph-bg-1.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-blend-mode: screen;
   width: 100%;
   padding: 20px 30px;
   color: $white;
